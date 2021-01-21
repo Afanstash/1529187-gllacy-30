@@ -1,7 +1,7 @@
 # Личный проект «Глейси»
 
-* Студент: [I. Leonov](https://up.htmlacademy.ru/htmlcss/30/user/1529187).
-* Наставник: `Неизвестно`.
+- Студент: [I. Leonov](https://up.htmlacademy.ru/htmlcss/30/user/1529187).
+- Наставник: [Александр Карташов](https://htmlacademy.ru/profile/id77080).
 
 ---
 
