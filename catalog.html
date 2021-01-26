@@ -115,6 +115,96 @@
       </ul>
 
       <h1>Сливочное мороженное</h1>
+
+      <section>
+        <h2>Фильтры</h2>
+
+        <form
+          action="https://echo.htmlacademy.ru/"
+          method="get"
+          name="form-filters"
+        >
+          <fieldset>
+            <legend>Сортировка:</legend>
+
+            <select name="filters-sort">
+              <option value="popularity">по популярности</option>
+              <option value="inexpensive">сначала недорогие</option>
+              <option value="expensive">сначала дорогие</option>
+              <option value="fat">По жирности</option>
+            </select>
+          </fieldset>
+
+          <fieldset>
+            <legend>Цена: 100 ₽ – 500 ₽</legend>
+
+            <input
+              type="range"
+              name="filters-price"
+              value="200"
+              min="100"
+              max="500"
+            />
+            <input
+              type="range"
+              name="filters-price"
+              value="400"
+              min="100"
+              max="500"
+            />
+          </fieldset>
+
+          <fieldset>
+            <legend>Жирность:</legend>
+
+            <label>
+              <input type="radio" name="filters-fat" />
+              0%
+            </label>
+
+            <label>
+              <input type="radio" name="filters-fat" checked />
+              до 10%
+            </label>
+
+            <label>
+              <input type="radio" name="filters-fat" />
+              до 30%
+            </label>
+
+            <label>
+              <input type="radio" name="filters-fat" />
+              выше 30%
+            </label>
+          </fieldset>
+
+          <fieldset>
+            <legend>Наполнители:</legend>
+            <label>
+              <input type="checkbox" name="filters-choco" checked />
+              шоколадные
+            </label>
+            <label>
+              <input type="checkbox" name="filters-sugar" checked />
+              сахарные присыпки
+            </label>
+            <label>
+              <input type="checkbox" name="filters-fruity" />
+              фрукты
+            </label>
+            <label>
+              <input type="checkbox" name="filters-syrop" />
+              сиропы
+            </label>
+            <label>
+              <input type="checkbox" name="filters-jam" />
+              джемы
+            </label>
+          </fieldset>
+
+          <button type="submit">Применить</button>
+        </form>
+      </section>
     </main>
 
     <footer>
