@@ -1,0 +1,42 @@
+/* Fonts */
+
+@font-face {
+  font-family: "Roboto";
+  src: url("../fonts/roboto.woff2") format("woff2"),
+    url("../fonts/roboto.woff") format("woff");
+
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("../fonts/robotomedium.woff2") format("woff2"),
+    url("../fonts/robotomedium.woff") format("woff");
+
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("../fonts/robotobold.woff2") format("woff2"),
+    url("../fonts/robotobold.woff") format("woff");
+
+  font-weight: 700;
+}
+
+/* Variables */
+
+:root {
+  --basic-green: #849d8f;
+  --basic-grey: #8996a6;
+  --basic-brown: #9d8b84;
+}
+
+/*  */
+
+.page__body {
+  font-family: "Roboto";
+  font-weight: 700;
+
+  background-color: var(--basic-green);
+}
