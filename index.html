@@ -75,8 +75,11 @@
       </nav>
 
       <ul class="user-navigation header__user-navigation">
-        <li class="user-navigation__link">
-          <label class="link link--search" for="form-search">
+        <li class="user-navigation__item">
+          <label
+            class="user-navigation__button user-navigation__button--search"
+            for="form-search"
+          >
             <span class="visually-hidden">Поиск</span>
           </label>
 
@@ -95,8 +98,13 @@
           </form>
         </li>
 
-        <li class="user-navigation__link">
-          <a class="link link--sign" href="#">Вход</a>
+        <li class="user-navigation__item">
+          <a
+            class="user-navigation__button user-navigation__button--sign"
+            href="#"
+          >
+            Вход
+          </a>
 
           <form
             class="sign-form"
@@ -126,8 +134,11 @@
           </form>
         </li>
 
-        <li class="user-navigation__link">
-          <a class="link link--cart" href="#">
+        <li class="user-navigation__item">
+          <a
+            class="user-navigation__button user-navigation__button--cart"
+            href="#"
+          >
             <span class="visually-hidden">Корзина</span>
           </a>
         </li>
@@ -142,10 +153,10 @@
     <main class="main page__main">
       <h1 class="visually-hidden">Магазин "Глэйси"</h1>
 
-      <section class="promo main__promo">
+      <section class="carousel main__carousel">
         <h2 class="visually-hidden">Промо-товары</h2>
 
-        <ul class="carousel promo__carousel">
+        <ul class="carousel__slide-list">
           <li class="slide carousel__slide">
             <img
               class="slide__pic"
@@ -191,7 +202,7 @@
           </li>
         </ul>
 
-        <div class="promo__switches">
+        <div class="carousel__switches">
           <input
             class="visually-hidden"
             type="radio"
@@ -199,7 +210,7 @@
             id="promo-btn1"
             checked
           />
-          <label class="switch promo__switch" for="promo-btn1"></label>
+          <label class="carousel__switch" for="promo-btn1"></label>
 
           <input
             class="visually-hidden"
@@ -207,7 +218,7 @@
             name="promo-radio-btn"
             id="promo-btn2"
           />
-          <label class="switch promo__switch" for="promo-btn2"></label>
+          <label class="carousel__switch" for="promo-btn2"></label>
 
           <input
             class="visually-hidden"
@@ -215,7 +226,7 @@
             name="promo-radio-btn"
             id="promo-btn3"
           />
-          <label class="switch promo__switch" for="promo-btn3"></label>
+          <label class="carousel__switch" for="promo-btn3"></label>
         </div>
       </section>
 
@@ -361,9 +372,9 @@
           <h2 class="visually-hidden">Наши новости</h2>
 
           <p class="news__title">Новое в нашем блоге</p>
-          <article class="article news__article">
-            <a href="#">
-              <h3 class="article__title">
+          <article class="blog-article news__blog-article">
+            <a class="blog-article__link" href="#">
+              <h3 class="blog-article__title">
                 10 способов сервировки фруктовых щербетов к столу
               </h3>
             </a>
@@ -431,22 +442,22 @@
 
         <ul class="socials__items">
           <li class="socials__item">
-            <a class="link socials__link socials__link--fb" href="#">
+            <a class="socials__link socials__link--fb" href="#">
               <span class="visually-hidden">Facebook</span>
             </a>
           </li>
           <li class="socials__item">
-            <a class="link socials__link socials__link--vk" href="#">
+            <a class="socials__link socials__link--vk" href="#">
               <span class="visually-hidden">VK</span>
             </a>
           </li>
           <li class="socials__item">
-            <a class="link socials__link socials__link--instagram" href="#">
+            <a class="socials__link socials__link--instagram" href="#">
               <span class="visually-hidden">Instagram</span>
             </a>
           </li>
           <li class="socials__item">
-            <a class="link socials__link socials__link--twitter" href="#">
+            <a class="socials__link socials__link--twitter" href="#">
               <span class="visually-hidden">Twitter</span>
             </a>
           </li>
@@ -535,7 +546,7 @@
         <button class="button feedback-form__button" type="submit">
           Отправить
         </button>
-        <button class="button feedback-form__button--close" type="button">
+        <button class="button feedback-form__button-close" type="button">
           <span class="visually-hidden">Закрыть</span>
         </button>
       </form>
