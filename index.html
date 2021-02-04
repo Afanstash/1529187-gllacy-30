@@ -27,7 +27,7 @@
 
   <body class="page">
     <header class="header page__header">
-      <a class="logo header__logo">
+      <a class="header__logo">
         <img
           src="./img/content/logo.svg"
           alt="Логотип магазина `Глэйси`"
@@ -38,38 +38,38 @@
 
       <nav class="header__main-navigation">
         <ul class="main-navigation">
-          <li class="main-navigation__link">
-            <a class="link link__widget" href="#">Каталог</a>
+          <li class="main-navigation__item">
+            <a class="link main-navigation__link" href="#">Каталог</a>
 
-            <ul class="widget widget--catalog">
-              <li class="widget-link widget__widget-link widget-link--special">
-                <a href="#">Новинки</a>
+            <ul class="inner-list main-navigation__inner-list">
+              <li class="inner-list__item inner-list__item--special">
+                <a class="inner-list__link" href="#">Новинки</a>
               </li>
 
-              <li class="widget-link widget__widget-link">
-                <a href="catalog.html">Сливочное</a>
+              <li class="inner-list__item">
+                <a class="inner-list__link" href="catalog.html">Сливочное</a>
               </li>
 
-              <li class="widget-link widget__widget-link">
-                <a href="#">Щербеты</a>
+              <li class="inner-list__item">
+                <a class="inner-list__link" href="#">Щербеты</a>
               </li>
 
-              <li class="widget-link widget__widget-link">
-                <a href="#">Фруктовый лед</a>
+              <li class="inner-list__item">
+                <a class="inner-list__link" href="#">Фруктовый лед</a>
               </li>
 
-              <li class="widget-link widget__widget-link">
-                <a href="#">Мелорин</a>
+              <li class="inner-list__item">
+                <a class="inner-list__link" href="#">Мелорин</a>
               </li>
             </ul>
           </li>
 
-          <li class="main-navigation__link">
-            <a class="link link__delivery" href="#">Доставка и оплата</a>
+          <li class="main-navigation__item">
+            <a class="link main-navigation__link" href="#">Доставка и оплата</a>
           </li>
 
-          <li class="main-navigation__link">
-            <a class="link link__about" href="#">О компании</a>
+          <li class="main-navigation__item">
+            <a class="link main-navigation__link" href="#">О компании</a>
           </li>
         </ul>
       </nav>
@@ -99,7 +99,7 @@
           <a class="link link--sign" href="#">Вход</a>
 
           <form
-            class="sign-form user-navigation__sign-form"
+            class="sign-form"
             action="https://echo.htmlacademy.ru/"
             method="get"
             name="form-sign"
@@ -117,7 +117,7 @@
               placeholder="......"
             />
 
-            <button class="button button--sign-form" type="submit">
+            <button class="button sign-form__button" type="submit">
               Войти
             </button>
 
@@ -133,9 +133,9 @@
         </li>
       </ul>
 
-      <div class="header__contacts">
-        <p class="contacts contacts--time">С 10 до 20 ежедневно</p>
-        <p class="contacts contacts--phone">8 812 450-25-25</p>
+      <div class="contacts header__contacts">
+        <p class="contacts__time">С 10 до 20 ежедневно</p>
+        <p class="contacts__phone">8 812 450-25-25</p>
       </div>
     </header>
 
@@ -147,15 +147,13 @@
 
         <ul class="carousel promo__carousel">
           <li class="slide carousel__slide">
-            <div class="slide-wrapper">
-              <img
-                class="slide__pic"
-                src="./img/content/index-promo/ice-cream-promo1.png"
-                alt="Картинка с мороженным `Крем брюле и пломбир с малиновым джемом`"
-                width="716"
-                height="716"
-              />
-            </div>
+            <img
+              class="slide__pic"
+              src="./img/content/index-promo/ice-cream-promo1.png"
+              alt="Картинка с мороженным `Крем брюле и пломбир с малиновым джемом`"
+              width="716"
+              height="716"
+            />
             <h3 class="slide__title">
               Крем брюле и пломбир с малиновым джемом
             </h3>
@@ -165,15 +163,13 @@
           </li>
 
           <li class="slide carousel__slide">
-            <div class="slide-wrapper">
-              <img
-                class="slide__pic"
-                src="./img/content/index-promo/ice-cream-promo2.png"
-                alt="Картинка с мороженным `Шоколадный пломбир и лимонный сорбет`"
-                width="716"
-                height="716"
-              />
-            </div>
+            <img
+              class="slide__pic"
+              src="./img/content/index-promo/ice-cream-promo2.png"
+              alt="Картинка с мороженным `Шоколадный пломбир и лимонный сорбет`"
+              width="716"
+              height="716"
+            />
             <h3 class="slide__title">Шоколадный пломбир и лимонный сорбет</h3>
             <button class="button button--promo" type="button">
               Давайте оба!
@@ -181,15 +177,13 @@
           </li>
 
           <li class="slide carousel__slide">
-            <div class="slide-wrapper">
-              <img
-                class="slide__pic"
-                src="./img/content/index-promo/ice-cream-promo3.png"
-                alt="Картинка с мороженным `Пломбир с помадкой и клубничный щербет`"
-                width="716"
-                height="716"
-              />
-            </div>
+            <img
+              class="slide__pic"
+              src="./img/content/index-promo/ice-cream-promo3.png"
+              alt="Картинка с мороженным `Пломбир с помадкой и клубничный щербет`"
+              width="716"
+              height="716"
+            />
             <h3 class="slide__title">Пломбир с помадкой и клубничный щербет</h3>
             <button class="button button--promo" type="button">
               Давайте оба!
@@ -235,7 +229,7 @@
               При покупке 2 кг любого фруктового мороженного, добавим в ваш
               заказ банку малинового варенья бесплатно.
             </p>
-            <button class="button button--sales" type="button">
+            <button class="button sales__button" type="button">
               Хочу варенья!
             </button>
           </li>
@@ -246,7 +240,7 @@
               При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей
               шоколадной присыпки совершенно бесплатно.
             </p>
-            <button class="button button--sales" type="button">
+            <button class="button sales__button" type="button">
               Хочу шоколадки!
             </button>
           </li>
@@ -256,7 +250,7 @@
       <section class="bestsellers main__bestsellers">
         <h2 class="visually-hidden">Хиты продаж</h2>
 
-        <ul class="bestsellers__product-card">
+        <ul class="bestsellers__product-list">
           <li class="product-card product-card--prime">
             <img
               class="product-card__pic"
@@ -269,7 +263,7 @@
             <h3 class="product-card__name">
               Сливочное с апельсиновым джемом и цитрусовой стружкой
             </h3>
-            <button class="button button--card" type="button">
+            <button class="button product-card__button" type="button">
               Быстрый просмотр
             </button>
           </li>
@@ -286,7 +280,7 @@
             <h3 class="product-card__name">
               Сливочно-кофейное с кусочками шоколада
             </h3>
-            <button class="button button--card" type="button">
+            <button class="button product-card__button" type="button">
               Быстрый просмотр
             </button>
           </li>
@@ -303,7 +297,7 @@
             <h3 class="product-card__name">
               Сливочно-клубничное с присыпкой из белого шоколада
             </h3>
-            <button class="button button--card" type="button">
+            <button class="button product-card__button" type="button">
               Быстрый просмотр
             </button>
           </li>
@@ -320,7 +314,7 @@
             <h3 class="product-card__name">
               Сливочное крем-брюле с карамельной подливкой
             </h3>
-            <button class="button button--card" type="button">
+            <button class="button product-card__button" type="button">
               Быстрый просмотр
             </button>
           </li>
@@ -335,26 +329,26 @@
           собственного производства на развес
         </p>
 
-        <ul class="features features__items">
-          <li class="features__item features__tech">
+        <ul class="features">
+          <li class="features__item features__item--tech">
             Все наше мороженое изготавливается на собственном производстве, с
             использованием современного оборудования и проверенных временем
             технологий.
           </li>
 
-          <li class="features__item features__eco">
+          <li class="features__item features__item--eco">
             Для приготовления мороженого используются настоящие сливки и молоко
             высочайшего качества. Все дополнительные ингредиенты и добавки
             произведены из натурального, экологически чистого сырья.
           </li>
 
-          <li class="features__item features__wrnt">
+          <li class="features__item features__item--wrnt">
             Закупка ингредиентов производится только у проверенных фермерских
             хозяйств и компаний, с которыми нас связывает долговременное
             сотрудничество.
           </li>
 
-          <li class="features__item features__delivery">
+          <li class="features__item features__item--delivery">
             Доставка нашего мороженого до заказчиков осуществляется в
             специальном термопаке, который не дает мороженому растаять в пути и
             позволяет сохранить превосходный вкус.
@@ -363,7 +357,7 @@
       </section>
 
       <div class="main__wrapper">
-        <section class="news main__news">
+        <section class="news">
           <h2 class="visually-hidden">Наши новости</h2>
 
           <p class="news__title">Новое в нашем блоге</p>
@@ -386,7 +380,7 @@
           </p>
 
           <form
-            class="subscribe-form"
+            class="subscribe-form subscribe__form"
             action="https://echo.htmlacademy.ru/"
             method="get"
             name="form-subscribe"
@@ -396,7 +390,7 @@
               type="text"
               name="field-email"
             />
-            <button class="button button--subscribe-form" type="submit">
+            <button class="button subscribe-form__button" type="submit">
               Отправить
             </button>
           </form>
@@ -408,7 +402,7 @@
 
         <div class="contacts__map"><!-- Здесь будет карта --></div>
 
-        <div class="contacts-wrapper">
+        <div class="contacts__wrapper">
           <dl class="contacts__info">
             <dt class="contacts__title">
               Адрес главного офиса и офлайн-магазина:
@@ -424,7 +418,7 @@
             </dd>
           </dl>
 
-          <button class="button button--contacts" type="button">
+          <button class="button contacts__button" type="button">
             Форма обратной связи
           </button>
         </div>
@@ -437,22 +431,22 @@
 
         <ul class="socials__items">
           <li class="socials__item">
-            <a class="link socials__link link--fb" href="#">
+            <a class="link socials__link socials__link--fb" href="#">
               <span class="visually-hidden">Facebook</span>
             </a>
           </li>
           <li class="socials__item">
-            <a class="link socials__link link--vk" href="#">
+            <a class="link socials__link socials__link--vk" href="#">
               <span class="visually-hidden">VK</span>
             </a>
           </li>
           <li class="socials__item">
-            <a class="link socials__link link--instagram" href="#">
+            <a class="link socials__link socials__link--instagram" href="#">
               <span class="visually-hidden">Instagram</span>
             </a>
           </li>
           <li class="socials__item">
-            <a class="link socials__link link--twitter" href="#">
+            <a class="link socials__link socials__link--twitter" href="#">
               <span class="visually-hidden">Twitter</span>
             </a>
           </li>
@@ -511,7 +505,7 @@
       <p class="feedback__title">Мы обязательно вам ответим!</p>
 
       <form
-        class="feedback-form"
+        class="feedback-form feedback__form"
         action="https://echo.htmlacademy.ru/"
         method="get"
         name="form-feedback"
@@ -538,14 +532,11 @@
 В свободной форме
         </textarea>
 
-        <button class="button button--feedback-form" type="submit">
+        <button class="button feedback-form__button" type="submit">
           Отправить
         </button>
-        <button
-          class="button button--close feedback__button-close"
-          type="button"
-        >
-          <span>Закрыть</span>
+        <button class="button feedback-form__button--close" type="button">
+          <span class="visually-hidden">Закрыть</span>
         </button>
       </form>
     </section>
