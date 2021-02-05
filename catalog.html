@@ -37,11 +37,11 @@
       </a>
 
       <nav class="header__main-navigation">
-        <ul class="main-navigation">
+        <ul class="list main-navigation">
           <li class="main-navigation__item">
             <a class="link main-navigation__link">Каталог</a>
 
-            <ul class="inner-list main-navigation__inner-list">
+            <ul class="list inner-list main-navigation__inner-list">
               <li class="inner-list__item inner-list__item--special">
                 <a class="inner-list__link" href="#">Новинки</a>
               </li>
@@ -74,7 +74,7 @@
         </ul>
       </nav>
 
-      <ul class="user-navigation header__user-navigation">
+      <ul class="list user-navigation header__user-navigation">
         <li class="user-navigation__item">
           <label
             class="user-navigation__button user-navigation__button--search"
@@ -84,7 +84,7 @@
           </label>
 
           <form
-            class="search-form user-navigation__search-form"
+            class="header__form search-form user-navigation__search-form"
             action="https://echo.htmlacademy.ru/"
             method="get"
           >
@@ -107,7 +107,7 @@
           </a>
 
           <form
-            class="sign-form"
+            class="header__form sign-form"
             action="https://echo.htmlacademy.ru/"
             method="get"
             name="form-sign"
@@ -125,7 +125,7 @@
               placeholder="......"
             />
 
-            <button class="button button--sign-form" type="submit">
+            <button class="button sign-form__button" type="submit">
               Войти
             </button>
 
@@ -143,7 +143,7 @@
           </a>
 
           <form
-            class="cart-form user-navigation__cart-form"
+            class="header__form cart-form user-navigation__cart-form"
             action="https://echo.htmlacademy.ru/"
             method="get"
           >
@@ -160,7 +160,7 @@
               value="{id: 222, quantity: 1.5, price: 300}"
             />
 
-            <ul class="product-list cart-form__product-list">
+            <ul class="list product-list cart-form__product-list">
               <li class="product-list__card">
                 <img
                   class="product-list__pic"
@@ -203,29 +203,29 @@
             </ul>
 
             <p class="cart-form__total">Итого: 750 руб.</p>
-            <button class="button button--cart-form" type="submit">
+            <button class="button cart-form__button" type="submit">
               Оформить заказ
             </button>
           </form>
         </li>
       </ul>
 
-      <div class="header__contacts">
-        <p class="contacts contacts--time">С 10 до 20 ежедневно</p>
-        <p class="contacts contacts--phone">8 812 450-25-25</p>
+      <div class="info header__info">
+        <p class="info__time">С 10 до 20 ежедневно</p>
+        <p class="info__phone">8 812 450-25-25</p>
       </div>
     </header>
 
     <main class="main page__main">
-      <ul class="crumbs main__crumbs">
+      <ul class="list crumbs main__crumbs">
         <li class="crumbs__item">
-          <a href="index.html">Главная</a>
+          <a class="link" href="index.html">Главная</a>
         </li>
         <li class="crumbs__item">
-          <a href="#">Каталог</a>
+          <a class="link" href="#">Каталог</a>
         </li>
         <li class="crumbs__item">
-          <a>Сливочное</a>
+          <a class="link">Сливочное</a>
         </li>
       </ul>
 
@@ -292,7 +292,12 @@
           <fieldset class="filters-form__section">
             <legend class="filters-form__title">Жирность:</legend>
 
-            <label class="radio filters-form__radio" for="fat_zero"> 0% </label>
+            <label
+              class="radio filters-form__label filters-form__radio"
+              for="fat_zero"
+            >
+              0%
+            </label>
             <input
               class="visually-hidden"
               type="radio"
@@ -300,7 +305,10 @@
               id="fat_zero"
             />
 
-            <label class="radio filters-form__radio" for="fat_upto-ten">
+            <label
+              class="radio filters-form__label filters-form__radio"
+              for="fat_upto-ten"
+            >
               до 10%
             </label>
             <input
@@ -311,7 +319,10 @@
               checked
             />
 
-            <label class="radio filters-form__radio" for="fat_upto-thirty">
+            <label
+              class="radio filters-form__label filters-form__radio"
+              for="fat_upto-thirty"
+            >
               до 30%
             </label>
             <input
@@ -321,7 +332,10 @@
               id="fat_upto-thirty"
             />
 
-            <label class="radio filters-form__radio" for="fat_over-thirty">
+            <label
+              class="radio filters-form__label filters-form__radio"
+              for="fat_over-thirty"
+            >
               выше 30%
             </label>
             <input
@@ -335,7 +349,10 @@
           <fieldset class="filters-form__section">
             <legend class="filters-form__title">Наполнители:</legend>
 
-            <label class="checkbox filters-form__checkbox" for="fill_choco">
+            <label
+              class="checkbox filters-form__label filters-form__checkbox"
+              for="fill_choco"
+            >
               шоколадные
             </label>
             <input
@@ -346,7 +363,10 @@
               checked
             />
 
-            <label class="checkbox filters-form__checkbox" for="fill_sugar">
+            <label
+              class="checkbox filters-form__label filters-form__checkbox"
+              for="fill_sugar"
+            >
               сахарные присыпки
             </label>
             <input
@@ -357,7 +377,10 @@
               checked
             />
 
-            <label class="checkbox filters-form__checkbox" for="fill_fruity">
+            <label
+              class="checkbox filters-form__label filters-form__checkbox"
+              for="fill_fruity"
+            >
               фрукты
             </label>
             <input
@@ -367,7 +390,10 @@
               id="fill_fruity"
             />
 
-            <label class="checkbox filters-form__checkbox" for="fill_syrop">
+            <label
+              class="checkbox filters-form__label filters-form__checkbox"
+              for="fill_syrop"
+            >
               сиропы
             </label>
             <input
@@ -377,7 +403,10 @@
               id="fill_syrop"
             />
 
-            <label class="checkbox filters-form__checkbox" for="fill_jam">
+            <label
+              class="checkbox filters-form__label filters-form__checkbox"
+              for="fill_jam"
+            >
               джемы
             </label>
             <input
@@ -388,16 +417,14 @@
             />
           </fieldset>
 
-          <button class="button filters-form__button" type="submit">
-            Применить
-          </button>
+          <button class="filters-form__button" type="submit">Применить</button>
         </form>
       </section>
 
       <section class="products main__products">
         <h2 class="visually-hidden">Каталог</h2>
 
-        <ul class="products__items">
+        <ul class="list products__items">
           <li class="product-card products__item">
             <img
               class="product-card__pic"
@@ -408,7 +435,7 @@
             />
             <p class="product-card__price">310 ₽<span>/кг</span></p>
             <h3 class="product-card__name">
-              <a href="#">
+              <a class="link product-card__link" href="#">
                 Сливочное с апельсиновым джемом и цитрусовой стружкой
               </a>
             </h3>
@@ -427,7 +454,9 @@
             />
             <p class="product-card__price">380 ₽<span>/кг</span></p>
             <h3 class="product-card__name">
-              <a href="#">Сливочно-кофейное с кусочками шоколада</a>
+              <a class="link product-card__link" href="#"
+                >Сливочно-кофейное с кусочками шоколада</a
+              >
             </h3>
             <button class="button button--card" type="button">
               Быстрый просмотр
@@ -444,7 +473,9 @@
             />
             <p class="product-card__price">355 ₽<span>/кг</span></p>
             <h3 class="product-card__name">
-              <a href="#">Сливочно-клубничное с присыпкой из белого шоколада</a>
+              <a class="link product-card__link" href="#"
+                >Сливочно-клубничное с присыпкой из белого шоколада</a
+              >
             </h3>
             <button class="button button--card" type="button">
               Быстрый просмотр
@@ -461,7 +492,9 @@
             />
             <p class="product-card__price">415 ₽<span>/кг</span></p>
             <h3 class="product-card__name">
-              <a href="#">Сливочное крем-брюле с карамельной подливкой</a>
+              <a class="link product-card__link" href="#"
+                >Сливочное крем-брюле с карамельной подливкой</a
+              >
             </h3>
             <button class="button button--card" type="button">
               Быстрый просмотр
@@ -478,7 +511,9 @@
             />
             <p class="product-card__price">325 ₽<span>/кг</span></p>
             <h3 class="product-card__name">
-              <a href="#">Сливочное с брусничным джемом</a>
+              <a class="link product-card__link" href="#"
+                >Сливочное с брусничным джемом</a
+              >
             </h3>
             <button class="button button--card" type="button">
               Быстрый просмотр
@@ -495,7 +530,9 @@
             />
             <p class="product-card__price">410 ₽<span>/кг</span></p>
             <h3 class="product-card__name">
-              <a href="#">Сливочно-черничное с цельными ягодами черники</a>
+              <a class="link product-card__link" href="#"
+                >Сливочно-черничное с цельными ягодами черники</a
+              >
             </h3>
             <button class="button button--card" type="button">
               Быстрый просмотр
@@ -512,7 +549,9 @@
             />
             <p class="product-card__price">315 ₽<span>/кг</span></p>
             <h3 class="product-card__name">
-              <a href="#">Сливочно-лимонное с карамельной присыпкой</a>
+              <a class="link product-card__link" href="#"
+                >Сливочно-лимонное с карамельной присыпкой</a
+              >
             </h3>
             <button class="button button--card" type="button">
               Быстрый просмотр
@@ -529,7 +568,9 @@
             />
             <p class="product-card__price">320 ₽<span>/кг</span></p>
             <h3 class="product-card__name">
-              <a href="#">Сливочное с шоколадной стружкой</a>
+              <a class="link product-card__link" href="#"
+                >Сливочное с шоколадной стружкой</a
+              >
             </h3>
             <button class="button button--card" type="button">
               Быстрый просмотр
@@ -546,7 +587,9 @@
             />
             <p class="product-card__price">440 ₽<span>/кг</span></p>
             <h3 class="product-card__name">
-              <a href="#">Сливочно-ванильное с кусочками шоколада</a>
+              <a class="link product-card__link" href="#"
+                >Сливочно-ванильное с кусочками шоколада</a
+              >
             </h3>
             <button class="button button--card" type="button">
               Быстрый просмотр
@@ -563,7 +606,9 @@
             />
             <p class="product-card__price">435 ₽<span>/кг</span></p>
             <h3 class="product-card__name">
-              <a href="#">Сливочноe с ментоловым сиропом</a>
+              <a class="link product-card__link" href="#"
+                >Сливочноe с ментоловым сиропом</a
+              >
             </h3>
             <button class="button button--card" type="button">
               Быстрый просмотр
@@ -580,7 +625,9 @@
             />
             <p class="product-card__price">355 ₽<span>/кг</span></p>
             <h3 class="product-card__name">
-              <a href="#">Сливочное с кусочками черного шоколада</a>
+              <a class="link product-card__link" href="#"
+                >Сливочное с кусочками черного шоколада</a
+              >
             </h3>
             <button class="button button--card" type="button">
               Быстрый просмотр
@@ -597,7 +644,9 @@
             />
             <p class="product-card__price">420 ₽<span>/кг</span></p>
             <h3 class="product-card__name">
-              <a href="#">Сливочное с мятным сиропом</a>
+              <a class="link product-card__link" href="#"
+                >Сливочное с мятным сиропом</a
+              >
             </h3>
             <button class="button button--card" type="button">
               Быстрый просмотр
@@ -612,19 +661,19 @@
 
           <ul class="pagination__pages">
             <li class="pagination__page">
-              <a>1</a>
+              <a class="link pagination__link">1</a>
             </li>
             <li class="pagination__page">
-              <a href="#">2</a>
+              <a class="link pagination__link" href="#">2</a>
             </li>
             <li class="pagination__page">
-              <a href="#">3</a>
+              <a class="link pagination__link" href="#">3</a>
             </li>
             <li class="pagination__page">
-              <a href="#">4</a>
+              <a class="link pagination__link" href="#">4</a>
             </li>
             <li class="pagination__page">
-              <a href="#">5</a>
+              <a class="link pagination__link" href="#">5</a>
             </li>
           </ul>
 
@@ -639,7 +688,7 @@
       <section class="socials footer__socials">
         <h2 class="visually-hidden">Соцсети</h2>
 
-        <ul class="socials__items">
+        <ul class="list socials__items">
           <li class="socials__item">
             <a class="socials__link socials__link--fb" href="#">
               <span class="visually-hidden">Facebook</span>
@@ -666,18 +715,18 @@
       <section class="extra footer__extra">
         <h2 class="visually-hidden">Дополнительная информация</h2>
 
-        <ul class="extra__items">
-          <li class="extra__item extra__item--provider">
-            <a href="#">Для поставщиков</a>
+        <ul class="list extra__items">
+          <li class="extra__item extra__item--special">
+            <a class="link extra__link" href="#">Для поставщиков</a>
           </li>
           <li class="extra__item">
-            <a href="#">О производстве</a>
+            <a class="link extra__link" href="#">О производстве</a>
           </li>
           <li class="extra__item">
-            <a href="#">Наши документы</a>
+            <a class="link extra__link" href="#">Наши документы</a>
           </li>
           <li class="extra__item">
-            <a href="#">Экологические стандарты</a>
+            <a class="link extra__link" href="#">Экологические стандарты</a>
           </li>
         </ul>
       </section>
