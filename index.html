@@ -37,11 +37,11 @@
       </a>
 
       <nav class="header__main-navigation">
-        <ul class="main-navigation">
+        <ul class="list main-navigation">
           <li class="main-navigation__item">
             <a class="link main-navigation__link" href="#">Каталог</a>
 
-            <ul class="inner-list main-navigation__inner-list">
+            <ul class="list inner-list main-navigation__inner-list">
               <li class="inner-list__item inner-list__item--special">
                 <a class="inner-list__link" href="#">Новинки</a>
               </li>
@@ -74,7 +74,7 @@
         </ul>
       </nav>
 
-      <ul class="user-navigation header__user-navigation">
+      <ul class="list user-navigation header__user-navigation">
         <li class="user-navigation__item">
           <label
             class="user-navigation__button user-navigation__button--search"
@@ -84,7 +84,7 @@
           </label>
 
           <form
-            class="search-form user-navigation__search-form"
+            class="header__form search-form user-navigation__search-form"
             action="https://echo.htmlacademy.ru/"
             method="get"
           >
@@ -107,7 +107,7 @@
           </a>
 
           <form
-            class="sign-form user-navigation__sign-form"
+            class="header__form sign-form user-navigation__sign-form"
             action="https://echo.htmlacademy.ru/"
             method="get"
             name="form-sign"
@@ -144,9 +144,9 @@
         </li>
       </ul>
 
-      <div class="contacts header__contacts">
-        <p class="contacts__time">С 10 до 20 ежедневно</p>
-        <p class="contacts__phone">8 812 450-25-25</p>
+      <div class="info header__info">
+        <p class="info__time">С 10 до 20 ежедневно</p>
+        <p class="info__phone">8 812 450-25-25</p>
       </div>
     </header>
 
@@ -156,7 +156,7 @@
       <section class="carousel main__carousel">
         <h2 class="visually-hidden">Промо-товары</h2>
 
-        <ul class="carousel__slide-list">
+        <ul class="list carousel__slide-list">
           <li class="slide carousel__slide">
             <img
               class="slide__pic"
@@ -168,7 +168,7 @@
             <h3 class="slide__title">
               Крем брюле и пломбир с малиновым джемом
             </h3>
-            <button class="button button--carousel" type="button">
+            <button class="button carousel__button" type="button">
               Давайте оба!
             </button>
           </li>
@@ -182,7 +182,7 @@
               height="716"
             />
             <h3 class="slide__title">Шоколадный пломбир и лимонный сорбет</h3>
-            <button class="button button--promo" type="button">
+            <button class="button carousel__button" type="button">
               Давайте оба!
             </button>
           </li>
@@ -196,7 +196,7 @@
               height="716"
             />
             <h3 class="slide__title">Пломбир с помадкой и клубничный щербет</h3>
-            <button class="button button--promo" type="button">
+            <button class="button carousel__button" type="button">
               Давайте оба!
             </button>
           </li>
@@ -233,8 +233,8 @@
       <section class="sales main__sales">
         <h2 class="visually-hidden">Акции</h2>
 
-        <ul class="sales__items">
-          <li class="sales__item">
+        <ul class="list sales__items">
+          <li class="sales__item sales__raspberry">
             <h3 class="sales__title">Малинка даром!</h3>
             <p class="sales__text">
               При покупке 2 кг любого фруктового мороженного, добавим в ваш
@@ -245,7 +245,7 @@
             </button>
           </li>
 
-          <li class="sales__item">
+          <li class="sales__item sales__choco">
             <h3 class="sales__title">Шоколадки даром!</h3>
             <p class="sales__text">
               При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей
@@ -261,7 +261,7 @@
       <section class="bestsellers main__bestsellers">
         <h2 class="visually-hidden">Хиты продаж</h2>
 
-        <ul class="bestsellers__product-list">
+        <ul class="list bestsellers__product-list">
           <li class="product-card product-card--prime">
             <img
               class="product-card__pic"
@@ -271,9 +271,11 @@
               height="267"
             />
             <p class="product-card__price">310 ₽<span>/кг</span></p>
-            <h3 class="product-card__name">
-              Сливочное с апельсиновым джемом и цитрусовой стружкой
-            </h3>
+            <a class="link product-card__link" href="#">
+              <h3 class="product-card__name">
+                Сливочное с апельсиновым джемом и цитрусовой стружкой
+              </h3>
+            </a>
             <button class="button product-card__button" type="button">
               Быстрый просмотр
             </button>
@@ -288,9 +290,11 @@
               height="267"
             />
             <p class="product-card__price">380 ₽<span>/кг</span></p>
-            <h3 class="product-card__name">
-              Сливочно-кофейное с кусочками шоколада
-            </h3>
+            <a class="link product-card__link" href="#">
+              <h3 class="product-card__name">
+                Сливочно-кофейное с кусочками шоколада
+              </h3>
+            </a>
             <button class="button product-card__button" type="button">
               Быстрый просмотр
             </button>
@@ -305,9 +309,11 @@
               height="267"
             />
             <p class="product-card__price">355 ₽<span>/кг</span></p>
-            <h3 class="product-card__name">
-              Сливочно-клубничное с присыпкой из белого шоколада
-            </h3>
+            <a class="link product-card__link" href="#">
+              <h3 class="product-card__name">
+                Сливочно-клубничное с присыпкой из белого шоколада
+              </h3>
+            </a>
             <button class="button product-card__button" type="button">
               Быстрый просмотр
             </button>
@@ -322,9 +328,11 @@
               height="267"
             />
             <p class="product-card__price">415 ₽<span>/кг</span></p>
-            <h3 class="product-card__name">
-              Сливочное крем-брюле с карамельной подливкой
-            </h3>
+            <a class="link product-card__link" href="#">
+              <h3 class="product-card__name">
+                Сливочное крем-брюле с карамельной подливкой
+              </h3>
+            </a>
             <button class="button product-card__button" type="button">
               Быстрый просмотр
             </button>
@@ -340,7 +348,7 @@
           собственного производства на развес
         </p>
 
-        <ul class="features">
+        <ul class="list features">
           <li class="features__item features__item--tech">
             Все наше мороженое изготавливается на собственном производстве, с
             использованием современного оборудования и проверенных временем
@@ -384,27 +392,29 @@
         <section class="subscribe main__subscribe">
           <h2 class="visually-hidden">Подписка на рассылку</h2>
 
-          <p class="subscribe__text">
-            Подпишитесь на нашу сладкую рассылку и будьте всегда в курсе всего
-            самого вкусного, что у нас происходит. Обещаем не спамить и не слать
-            всякой ненужной ерунды. Честно =)
-          </p>
+          <div class="subscribe__wrapper">
+            <p class="subscribe__text">
+              Подпишитесь на нашу сладкую рассылку и будьте всегда в курсе всего
+              самого вкусного, что у нас происходит. Обещаем не спамить и не
+              слать всякой ненужной ерунды. Честно =)
+            </p>
 
-          <form
-            class="subscribe-form subscribe__form"
-            action="https://echo.htmlacademy.ru/"
-            method="get"
-            name="form-subscribe"
-          >
-            <input
-              class="subscribe-form__input"
-              type="text"
-              name="field-email"
-            />
-            <button class="button subscribe-form__button" type="submit">
-              Отправить
-            </button>
-          </form>
+            <form
+              class="subscribe-form subscribe__form"
+              action="https://echo.htmlacademy.ru/"
+              method="get"
+              name="form-subscribe"
+            >
+              <input
+                class="field subscribe-form__field"
+                type="text"
+                name="field-email"
+              />
+              <button class="button subscribe-form__button" type="submit">
+                Отправить
+              </button>
+            </form>
+          </div>
         </section>
       </div>
 
@@ -440,7 +450,7 @@
       <section class="socials footer__socials">
         <h2 class="visually-hidden">Соцсети</h2>
 
-        <ul class="socials__items">
+        <ul class="list socials__items">
           <li class="socials__item">
             <a class="socials__link socials__link--fb" href="#">
               <span class="visually-hidden">Facebook</span>
@@ -467,18 +477,18 @@
       <section class="extra footer__extra">
         <h2 class="visually-hidden">Дополнительная информация</h2>
 
-        <ul class="extra__items">
-          <li class="extra__item extra__item--provider">
-            <a href="#">Для поставщиков</a>
+        <ul class="list extra__items">
+          <li class="extra__item extra__item--special">
+            <a class="link extra__link" href="#">Для поставщиков</a>
           </li>
           <li class="extra__item">
-            <a href="#">О производстве</a>
+            <a class="link extra__link" href="#">О производстве</a>
           </li>
           <li class="extra__item">
-            <a href="#">Наши документы</a>
+            <a class="link extra__link" href="#">Наши документы</a>
           </li>
           <li class="extra__item">
-            <a href="#">Экологические стандарты</a>
+            <a class="link extra__link" href="#">Экологические стандарты</a>
           </li>
         </ul>
       </section>
@@ -522,20 +532,20 @@
         name="form-feedback"
       >
         <input
-          class="feedback-form__input"
+          class="field feedback-form__field"
           type="text"
           name="feedback-name"
           placeholder="Имя Фамилия"
         />
         <input
-          class="feedback-form__input"
+          class="field feedback-form__field"
           type="text"
           name="feedback-email"
           placeholder="example@email.com"
         />
 
         <textarea
-          class="feedback-form__review"
+          class="field feedback-form__review"
           name="feedback-comment"
           cols="30"
           rows="10"
