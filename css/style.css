@@ -283,7 +283,7 @@
 
 .sign-form__link:hover,
 .sign-form__link:focus {
-  color: var(--hover-link--brightred);
+  color: var(--base-brightred);
 
   border-bottom-color: var(--transparent-brightred);
 }
@@ -456,7 +456,7 @@
 
 .blog-article__link:hover,
 .blog-article__link:focus {
-  color: var(--hover-link--brightred);
+  color: var(--base-brightred);
 }
 
 /* Subscribe */
@@ -506,10 +506,15 @@
 
 .crumbs__item a:hover {
   color: var(--base-dimred);
+
+  border-bottom-color: var(--transparent-dimred);
 }
 
+.crumbs__item a:not([href]),
 .crumbs__item a:not([href]):hover {
   color: var(--base-white);
+
+  border-bottom-color: transparent;
 }
 
 /* Filters */
