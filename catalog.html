@@ -76,13 +76,17 @@
 
       <ul class="list user-navigation header__user-navigation">
         <li class="user-navigation__item">
-          <label
-            class="user-navigation__button user-navigation__button--search"
-            for="form-search"
-          >
+          <label class="user-navigation__button" for="form-search" tabindex="0">
+            <svg
+              class="user-navigation__button--search"
+              width="16"
+              height="16"
+              viewBox="0 0 16 16"
+            >
+              <use xlink:href="#search"></use>
+            </svg>
             <span class="visually-hidden">Поиск</span>
           </label>
-
           <form
             class="header__form search-form user-navigation__search-form"
             action="https://echo.htmlacademy.ru/"
@@ -99,10 +103,15 @@
         </li>
 
         <li class="user-navigation__item">
-          <a
-            class="user-navigation__button user-navigation__button--sign"
-            href="#"
-          >
+          <a class="user-navigation__button" href="#">
+            <svg
+              class="user-navigation__button--sign"
+              width="20"
+              height="19"
+              viewBox="0 0 20 19"
+            >
+              <use xlink:href="#sign"></use>
+            </svg>
             Вход
           </a>
 
@@ -134,11 +143,16 @@
           </form>
         </li>
 
-        <li class="user-navigation__item">
-          <a
-            class="user-navigation__button user-navigation__button--cart"
-            href="#"
-          >
+        <li class="user-navigation__item cart-nonzero">
+          <a class="user-navigation__cart" href="#">
+            <svg
+              class="user-navigation__button--cart"
+              width="21"
+              height="20"
+              viewBox="0 0 21 20"
+            >
+              <use xlink:href="#cart"></use>
+            </svg>
             <span class="visually-hidden">Корзина</span>
           </a>
 
@@ -758,4 +772,25 @@
       </section>
     </footer>
   </body>
+
+  <svg display="none">
+    <symbol id="search">
+      <path
+        d="M16 14.665l-4.921-4.932a6.144 6.144 0 00-.994-8.273 6.113 6.113 0 00-8.307.352 6.141 6.141 0 00-.293 8.328 6.11 6.11 0 008.262.937L14.659 16 16 14.665zm-9.918-4.288a4.245 4.245 0 01-3.928-2.63 4.269 4.269 0 01.922-4.643 4.248 4.248 0 014.632-.923 4.253 4.253 0 012.624 3.936 4.274 4.274 0 01-1.247 3.01 4.256 4.256 0 01-3.003 1.25z"
+      />
+    </symbol>
+    <symbol id="sign">
+      <path d="M6.04 14.88l6.92-5.38-6.92-5.37v2.91H0v4.92h6.04v2.92z" />
+      <path
+        d="M18 0H5a2 2 0 00-2 2v2h2V2h13v15H5v-2H3v2a2 2 0 002 2h13a2 2 0 002-2V2a2 2 0 00-2-2z"
+      />
+    </symbol>
+    <symbol id="cart">
+      <path d="M5 3l1.2 11h12.4L20 3H5z" />
+      <path
+        fill="currentColor"
+        d="M7 20a2 2 0 002-2 2 2 0 00-2-2 2 2 0 00-2 2c0 1.1 1 2 2 2zM16.1 20a2 2 0 002-2 2 2 0 00-2-2 2 2 0 00-2 2c0 1.1.9 2 2 2zM5.7 2l-.2-2H0v2h3.7l1.5 13h14L21 2H5.7zm11.8 11H7L6 4h12.7l-1.2 9z"
+      />
+    </symbol>
+  </svg>
 </html>

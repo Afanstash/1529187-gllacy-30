@@ -82,6 +82,10 @@
   --basic-box-shadow: 0px 2px 2px var(--extra-transparent-darkred);
   --hover-box-shadow: 0px 2px 2px var(--base-darkred);
   --active-box-shadow: inset 0px 2px 2px var(--extra-darkred);
+
+  /* Socials */
+  --soc-stroke-base: rgba(255, 255, 255, 0.5);
+  --soc-stroke-active: rgba(255, 255, 255, 0.7);
 }
 
 /*  */
@@ -108,11 +112,11 @@
 /* Global */
 /*  */
 .visually-hidden {
-  /* position: absolute;
+  position: absolute;
   clip: rect(0 0 0 0);
   width: 1px;
   height: 1px;
-  margin: -1px; */
+  margin: -1px;
 }
 
 .link {
@@ -253,7 +257,8 @@
 
 /* User navigation */
 
-.user-navigation__button {
+.user-navigation__button,
+.user-navigation__cart {
   text-decoration: none;
 
   font-size: 14px;
@@ -269,6 +274,42 @@
   color: var(--base-black);
 
   background: var(--base-white);
+}
+
+.user-navigation__button--search,
+.user-navigation__button--sign {
+  fill: var(--base-white);
+}
+
+.user-navigation__button:hover .user-navigation__button--search,
+.user-navigation__button:hover .user-navigation__button--sign {
+  fill: var(--base-black);
+}
+
+.user-navigation__cart::after {
+  content: "Пусто";
+
+  color: var(--base-white);
+}
+
+.user-navigation__button--cart {
+  fill: transparent;
+  color: var(--base-white);
+}
+
+.cart-nonzero .user-navigation__cart {
+  background: var(--base-white);
+}
+
+.cart-nonzero .user-navigation__cart::after {
+  content: "2 товара";
+
+  color: var(--base-black);
+}
+
+.cart-nonzero .user-navigation__button--cart {
+  fill: var(--base-brightred);
+  color: var(--base-black);
 }
 
 .sign-form__link {
@@ -599,6 +640,29 @@
 /*  */
 .footer {
   font-weight: 400;
+}
+
+/* Socials */
+
+.socials__link .socials__link-icon {
+  width: 36px;
+  height: 36px;
+
+  fill: var(--base-white);
+  fill-opacity: 0.8;
+
+  border-radius: 50%;
+  border: 2px solid var(--soc-stroke-base);
+}
+
+.socials__link:hover .socials__link-icon {
+  fill-opacity: 1;
+}
+
+.socials__link:active .socials__link-icon {
+  fill-opacity: 1;
+
+  border-color: var(--soc-stroke-active);
 }
 
 /* Extra info */
