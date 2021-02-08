@@ -38,11 +38,15 @@
         </a>
 
         <nav class="header__main-navigation">
-          <ul class="list main-navigation">
+          <ul class="base-list main-navigation">
             <li class="main-navigation__item">
-              <a class="link main-navigation__link" href="#">Каталог</a>
+              <a
+                class="base-link main-navigation__link main-navigation__link-catalog"
+                href="#"
+                >Каталог</a
+              >
 
-              <ul class="list inner-list main-navigation__inner-list">
+              <ul class="base-list inner-list main-navigation__inner-list">
                 <li class="inner-list__item inner-list__item--special">
                   <a class="inner-list__link" href="#">Новинки</a>
                 </li>
@@ -66,21 +70,21 @@
             </li>
 
             <li class="main-navigation__item">
-              <a class="link main-navigation__link" href="#"
+              <a class="base-link main-navigation__link" href="#"
                 >Доставка и оплата</a
               >
             </li>
 
             <li class="main-navigation__item">
-              <a class="link main-navigation__link" href="#">О компании</a>
+              <a class="base-link main-navigation__link" href="#">О компании</a>
             </li>
           </ul>
         </nav>
 
-        <ul class="list user-navigation header__user-navigation">
+        <ul class="base-list user-navigation header__user-navigation">
           <li class="user-navigation__item">
             <label
-              class="user-navigation__button"
+              class="user-navigation__button user-navigation__button-search"
               for="form-search"
               tabindex="0"
             >
@@ -111,7 +115,10 @@
           </li>
 
           <li class="user-navigation__item">
-            <a class="user-navigation__button" href="#">
+            <a
+              class="user-navigation__button user-navigation__button-sign"
+              href="#"
+            >
               <svg
                 class="user-navigation__button--sign"
                 width="20"
@@ -146,8 +153,10 @@
                 Войти
               </button>
 
-              <a class="link sign-form__link" href="#">Забыли пароль?</a>
-              <a class="link sign-form__link" href="#">Новая регистрация</a>
+              <a class="base-link sign-form__link" href="#">Забыли пароль?</a>
+              <a class="base-link sign-form__link" href="#"
+                >Новая регистрация</a
+              >
             </form>
           </li>
 
@@ -165,6 +174,7 @@
             </a>
           </li>
         </ul>
+
         <div class="info header__info">
           <p class="info__time">С 10 до 20 ежедневно</p>
           <p class="info__phone">8 812 450-25-25</p>
@@ -177,15 +187,18 @@
         <section class="carousel main__carousel">
           <h2 class="visually-hidden">Промо-товары</h2>
 
-          <ul class="list carousel__slide-list">
-            <li class="slide carousel__slide">
-              <img
-                class="slide__pic"
-                src="./img/content/index-promo/ice-cream-promo1.png"
-                alt="Картинка с мороженным `Крем брюле и пломбир с малиновым джемом`"
-                width="716"
-                height="716"
-              />
+          <ul class="base-list carousel__slide-list">
+            <li class="slide carousel__slide slide-1">
+              <div class="slide__pic-box">
+                <img
+                  class="slide__pic"
+                  src="./img/content/index-promo/ice-cream-promo1.png"
+                  alt="Картинка с мороженным `Крем брюле и пломбир с малиновым джемом`"
+                  width="716"
+                  height="716"
+                />
+              </div>
+
               <h3 class="slide__title">
                 Крем брюле и пломбир с малиновым джемом
               </h3>
@@ -194,28 +207,34 @@
               </button>
             </li>
 
-            <li class="slide carousel__slide">
-              <img
-                class="slide__pic"
-                src="./img/content/index-promo/ice-cream-promo2.png"
-                alt="Картинка с мороженным `Шоколадный пломбир и лимонный сорбет`"
-                width="716"
-                height="716"
-              />
+            <li class="slide carousel__slide slide-2">
+              <div class="slide__pic-box">
+                <img
+                  class="slide__pic"
+                  src="./img/content/index-promo/ice-cream-promo2.png"
+                  alt="Картинка с мороженным `Шоколадный пломбир и лимонный сорбет`"
+                  width="716"
+                  height="716"
+                />
+              </div>
+
               <h3 class="slide__title">Шоколадный пломбир и лимонный сорбет</h3>
               <button class="button carousel__button" type="button">
                 Давайте оба!
               </button>
             </li>
 
-            <li class="slide carousel__slide">
-              <img
-                class="slide__pic"
-                src="./img/content/index-promo/ice-cream-promo3.png"
-                alt="Картинка с мороженным `Пломбир с помадкой и клубничный щербет`"
-                width="716"
-                height="716"
-              />
+            <li class="slide carousel__slide slide-3">
+              <div class="slide__pic-box">
+                <img
+                  class="slide__pic"
+                  src="./img/content/index-promo/ice-cream-promo3.png"
+                  alt="Картинка с мороженным `Пломбир с помадкой и клубничный щербет`"
+                  width="716"
+                  height="716"
+                />
+              </div>
+
               <h3 class="slide__title">
                 Пломбир с помадкой и клубничный щербет
               </h3>
@@ -227,36 +246,66 @@
 
           <div class="carousel__switches">
             <input
-              class="visually-hidden"
+              class="visually-hidden carousel__input"
               type="radio"
               name="promo-radio-btn"
               id="promo-btn1"
               checked
             />
-            <label class="carousel__switch" for="promo-btn1"></label>
+            <label class="carousel__switch" for="promo-btn1">
+              <svg
+                class="switch"
+                width="21"
+                height="21"
+                fill="white"
+                viewBox="0 0 21 21"
+              >
+                <use xlink:href="#promo-btn"></use>
+              </svg>
+            </label>
 
             <input
-              class="visually-hidden"
+              class="visually-hidden carousel__input"
               type="radio"
               name="promo-radio-btn"
               id="promo-btn2"
             />
-            <label class="carousel__switch" for="promo-btn2"></label>
+            <label class="carousel__switch" for="promo-btn2">
+              <svg
+                class="switch"
+                width="21"
+                height="21"
+                fill="white"
+                viewBox="0 0 21 21"
+              >
+                <use xlink:href="#promo-btn"></use>
+              </svg>
+            </label>
 
             <input
-              class="visually-hidden"
+              class="visually-hidden carousel__input"
               type="radio"
               name="promo-radio-btn"
               id="promo-btn3"
             />
-            <label class="carousel__switch" for="promo-btn3"></label>
+            <label class="carousel__switch" for="promo-btn3">
+              <svg
+                class="switch"
+                width="21"
+                height="21"
+                fill="white"
+                viewBox="0 0 21 21"
+              >
+                <use xlink:href="#promo-btn"></use>
+              </svg>
+            </label>
           </div>
         </section>
 
         <section class="sales main__sales">
           <h2 class="visually-hidden">Акции</h2>
 
-          <ul class="list sales__items">
+          <ul class="base-list sales__items">
             <li class="sales__item sales__raspberry">
               <h3 class="sales__title">Малинка даром!</h3>
               <p class="sales__text">
@@ -284,7 +333,7 @@
         <section class="bestsellers main__bestsellers">
           <h2 class="visually-hidden">Хиты продаж</h2>
 
-          <ul class="list bestsellers__product-list">
+          <ul class="base-list bestsellers__product-list">
             <li class="product-card product-card--prime">
               <img
                 class="product-card__pic"
@@ -294,7 +343,7 @@
                 height="267"
               />
               <p class="product-card__price">310 ₽<span>/кг</span></p>
-              <a class="link product-card__link" href="#">
+              <a class="product-card__link" href="#">
                 <h3 class="product-card__name">
                   Сливочное с апельсиновым джемом и цитрусовой стружкой
                 </h3>
@@ -313,7 +362,7 @@
                 height="267"
               />
               <p class="product-card__price">380 ₽<span>/кг</span></p>
-              <a class="link product-card__link" href="#">
+              <a class="product-card__link" href="#">
                 <h3 class="product-card__name">
                   Сливочно-кофейное с кусочками шоколада
                 </h3>
@@ -332,7 +381,7 @@
                 height="267"
               />
               <p class="product-card__price">355 ₽<span>/кг</span></p>
-              <a class="link product-card__link" href="#">
+              <a class="product-card__link" href="#">
                 <h3 class="product-card__name">
                   Сливочно-клубничное с присыпкой из белого шоколада
                 </h3>
@@ -351,7 +400,7 @@
                 height="267"
               />
               <p class="product-card__price">415 ₽<span>/кг</span></p>
-              <a class="link product-card__link" href="#">
+              <a class="product-card__link" href="#">
                 <h3 class="product-card__name">
                   Сливочное крем-брюле с карамельной подливкой
                 </h3>
@@ -371,7 +420,7 @@
             собственного производства на развес
           </p>
 
-          <ul class="list features">
+          <ul class="base-list features">
             <li class="features__item features__item--tech">
               Все наше мороженое изготавливается на собственном производстве, с
               использованием современного оборудования и проверенных временем
@@ -473,7 +522,7 @@
         <section class="socials footer__socials">
           <h2 class="visually-hidden">Соцсети</h2>
 
-          <ul class="list socials__items">
+          <ul class="base-list socials__items">
             <li class="socials__item">
               <a class="socials__link" href="#">
                 <svg
@@ -535,18 +584,30 @@
         <section class="extra footer__extra">
           <h2 class="visually-hidden">Дополнительная информация</h2>
 
-          <ul class="list extra__items">
+          <ul class="base-list extra__items">
             <li class="extra__item extra__item--special">
-              <a class="link extra__link" href="#">Для поставщиков</a>
+              <a class="base-link extra__link" href="#">
+                <svg
+                  class="extra__item-icon"
+                  width="15"
+                  height="13"
+                  viewBox="0 0 15 13"
+                >
+                  <use xlink:href="#heart"></use>
+                </svg>
+                Для поставщиков
+              </a>
             </li>
             <li class="extra__item">
-              <a class="link extra__link" href="#">О производстве</a>
+              <a class="base-link extra__link" href="#">О производстве</a>
             </li>
             <li class="extra__item">
-              <a class="link extra__link" href="#">Наши документы</a>
+              <a class="base-link extra__link" href="#">Наши документы</a>
             </li>
             <li class="extra__item">
-              <a class="link extra__link" href="#">Экологические стандарты</a>
+              <a class="base-link extra__link" href="#"
+                >Экологические стандарты</a
+              >
             </li>
           </ul>
         </section>
@@ -569,7 +630,7 @@
           <p class="copyright__text">
             Сделано в
             <a
-              class="link copyright__academy-link"
+              class="base-link copyright__academy-link"
               href="https://htmlacademy.ru/intensive/htmlcss"
               >HTML Academy</a
             >
@@ -666,6 +727,16 @@
       />
       <path
         d="M16 0a16 16 0 100 32 16 16 0 000-32zm6.6 20.53a3.7 3.7 0 01-1.12 1.33c-.55.41-1.17.71-1.83.88-.82.2-1.67.29-2.51.27H11V9h5.45c.83-.01 1.66.02 2.48.11.54.08 1.07.25 1.56.5.5.24.91.62 1.19 1.09.27.47.4 1 .39 1.55.01.64-.18 1.27-.54 1.8-.38.54-.92.95-1.53 1.2v.07a4 4 0 012.18 1.13c.55.62.84 1.43.8 2.26.02.63-.1 1.25-.38 1.82z"
+      />
+    </symbol>
+    <symbol id="promo-btn">
+      <circle cx="10.5" cy="10.5" r="10.5" fill="white" fill-opacity="0" />
+      <circle cx="10.5" cy="10.5" r="9.5" stroke="white" stroke-width="2" />
+    </symbol>
+    <symbol id="heart">
+      <path
+        d="M10.8 0a4.1 4.1 0 00-3.3 1.66A4.1 4.1 0 004.2 0 4.12 4.12 0 000 4c0 3.18 7.5 9 7.5 9S15 7.22 15 4a4.12 4.12 0 00-4.2-4z"
+        fill="currentColor"
       />
     </symbol>
   </svg>
