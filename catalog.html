@@ -52,7 +52,7 @@
                 </li>
 
                 <li class="inner-list__item">
-                  <a class="inner-list__link" href="catalog.html">Сливочное</a>
+                  <a class="inner-list__link">Сливочное</a>
                 </li>
 
                 <li class="inner-list__item">
@@ -89,7 +89,7 @@
               tabindex="0"
             >
               <svg
-                class="user-navigation__button--search"
+                class="user-navigation__icon-search"
                 width="16"
                 height="16"
                 viewBox="0 0 16 16"
@@ -120,7 +120,7 @@
               href="#"
             >
               <svg
-                class="user-navigation__button--sign"
+                class="user-navigation__icon-sign"
                 width="20"
                 height="19"
                 viewBox="0 0 20 19"
@@ -137,13 +137,13 @@
               name="form-sign"
             >
               <input
-                class="field sign-form__field"
+                class="field sign-form__field sign-form__field-email"
                 type="text"
                 name="sign-email"
                 placeholder="example@email.com"
               />
               <input
-                class="field sign-form__field"
+                class="field sign-form__field sign-form__field-password"
                 type="password"
                 name="sign-password"
                 placeholder="......"
@@ -153,17 +153,28 @@
                 Войти
               </button>
 
-              <a class="base-link sign-form__link" href="#">Забыли пароль?</a>
-              <a class="base-link sign-form__link" href="#"
-                >Новая регистрация</a
-              >
+              <ul class="base-list sign-form__help-list">
+                <li>
+                  <a class="base-link sign-form__link" href="#"
+                    >Забыли пароль?</a
+                  >
+                </li>
+                <li>
+                  <a class="base-link sign-form__link" href="#"
+                    >Новая регистрация</a
+                  >
+                </li>
+              </ul>
             </form>
           </li>
 
           <li class="user-navigation__item cart-nonzero">
-            <a class="user-navigation__cart" href="#">
+            <a
+              class="user-navigation__button user-navigation__button-cart"
+              href="#"
+            >
               <svg
-                class="user-navigation__button--cart"
+                class="user-navigation__icon-cart"
                 width="21"
                 height="20"
                 viewBox="0 0 21 20"
@@ -208,7 +219,10 @@
                   </p>
                   <p class="product-list__total">300 руб.</p>
                   <button class="product-list__button-close" type="button">
-                    Удалить из корзины
+                    <span class="visually-hidden">Удалить из корзины</span>
+                    <svg width="11" height="11" viewport="0 0 11 11">
+                      <use xlink:href="#button-close"></use>
+                    </svg>
                   </button>
                 </li>
 
@@ -228,7 +242,10 @@
                   </p>
                   <p class="product-list__total">450 руб.</p>
                   <button class="product-list__button-close" type="button">
-                    Удалить из корзины
+                    <span class="visually-hidden">Удалить из корзины</span>
+                    <svg width="11" height="11" viewport="0 0 11 11">
+                      <use xlink:href="#button-close"></use>
+                    </svg>
                   </button>
                 </li>
               </ul>
@@ -242,7 +259,7 @@
         </ul>
 
         <div class="info header__info">
-          <p class="info__time">С 10 до 20 ежедневно</p>
+          <p class="info__time">С 10 до 20, ежедневно</p>
           <p class="info__phone">8 812 450-25-25</p>
         </div>
       </header>
@@ -1080,6 +1097,12 @@
         d="M19.26 17.4c0 .22-.1.44-.27.6a.94.94 0 01-.65.26H2.75a.94.94 0 01-.65-.25.85.85 0 01-.27-.62V2.61c0-.23.1-.45.27-.62.17-.16.4-.25.65-.25h15.5L19.72.36A2.87 2.87 0 0018.34 0H2.75C2.02 0 1.32.27.81.76.29 1.26 0 1.92 0 2.61v14.78c0 .7.29 1.36.8 1.85.52.49 1.22.76 1.95.76h15.6c.72 0 1.42-.27 1.94-.76.51-.5.8-1.16.8-1.85V8.84l-1.83 1.74v6.81z"
         fill="#fff"
         fill-opacity=".8"
+      />
+    </symbol>
+    <symbol id="button-close">
+      <path
+        d="M11 .71L10.29 0 5.5 4.79.71 0 0 .71 4.79 5.5 0 10.29l.71.71L5.5 6.21 10.29 11l.71-.71L6.21 5.5 11 .71z"
+        fill="#323232"
       />
     </symbol>
   </svg>

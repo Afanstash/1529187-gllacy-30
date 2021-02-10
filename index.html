@@ -89,7 +89,7 @@
               tabindex="0"
             >
               <svg
-                class="user-navigation__button--search"
+                class="user-navigation__icon-search"
                 width="16"
                 height="16"
                 viewBox="0 0 16 16"
@@ -120,7 +120,7 @@
               href="#"
             >
               <svg
-                class="user-navigation__button--sign"
+                class="user-navigation__icon-sign"
                 width="20"
                 height="19"
                 viewBox="0 0 20 19"
@@ -137,13 +137,13 @@
               name="form-sign"
             >
               <input
-                class="field sign-form__field"
+                class="field sign-form__field sign-form__field-email"
                 type="text"
                 name="sign-email"
                 placeholder="example@email.com"
               />
               <input
-                class="field sign-form__field"
+                class="field sign-form__field sign-form__field-password"
                 type="password"
                 name="sign-password"
                 placeholder="......"
@@ -153,17 +153,28 @@
                 Войти
               </button>
 
-              <a class="base-link sign-form__link" href="#">Забыли пароль?</a>
-              <a class="base-link sign-form__link" href="#"
-                >Новая регистрация</a
-              >
+              <ul class="base-list sign-form__help-list">
+                <li>
+                  <a class="base-link sign-form__link" href="#"
+                    >Забыли пароль?</a
+                  >
+                </li>
+                <li>
+                  <a class="base-link sign-form__link" href="#"
+                    >Новая регистрация</a
+                  >
+                </li>
+              </ul>
             </form>
           </li>
 
           <li class="user-navigation__item">
-            <a class="user-navigation__cart" href="#">
+            <a
+              class="user-navigation__button user-navigation__button-cart"
+              href="#"
+            >
               <svg
-                class="user-navigation__button--cart"
+                class="user-navigation__icon-cart"
                 width="21"
                 height="20"
                 viewBox="0 0 21 20"
@@ -176,7 +187,7 @@
         </ul>
 
         <div class="info header__info">
-          <p class="info__time">С 10 до 20 ежедневно</p>
+          <p class="info__time">С 10 до 20, ежедневно</p>
           <p class="info__phone">8 812 450-25-25</p>
         </div>
       </header>
