@@ -198,6 +198,63 @@
         <section class="carousel main__carousel">
           <h2 class="visually-hidden">Промо-товары</h2>
 
+          <div class="carousel__switches">
+            <input
+              class="visually-hidden carousel__input"
+              type="radio"
+              name="promo-radio-btn"
+              id="promo-btn1"
+              checked
+            />
+            <label class="carousel__switch" for="promo-btn1">
+              <svg
+                class="switch"
+                width="21"
+                height="21"
+                fill="white"
+                viewBox="0 0 21 21"
+              >
+                <use xlink:href="#promo-btn"></use>
+              </svg>
+            </label>
+
+            <input
+              class="visually-hidden carousel__input"
+              type="radio"
+              name="promo-radio-btn"
+              id="promo-btn2"
+            />
+            <label class="carousel__switch" for="promo-btn2">
+              <svg
+                class="switch"
+                width="21"
+                height="21"
+                fill="white"
+                viewBox="0 0 21 21"
+              >
+                <use xlink:href="#promo-btn"></use>
+              </svg>
+            </label>
+
+            <input
+              class="visually-hidden carousel__input"
+              type="radio"
+              name="promo-radio-btn"
+              id="promo-btn3"
+            />
+            <label class="carousel__switch" for="promo-btn3">
+              <svg
+                class="switch"
+                width="21"
+                height="21"
+                fill="white"
+                viewBox="0 0 21 21"
+              >
+                <use xlink:href="#promo-btn"></use>
+              </svg>
+            </label>
+          </div>
+
           <ul class="base-list carousel__slide-list">
             <li class="slide carousel__slide slide-1">
               <div class="slide__pic-box">
@@ -262,63 +319,6 @@
               </div>
             </li>
           </ul>
-
-          <div class="carousel__switches">
-            <input
-              class="visually-hidden carousel__input"
-              type="radio"
-              name="promo-radio-btn"
-              id="promo-btn1"
-              checked
-            />
-            <label class="carousel__switch" for="promo-btn1">
-              <svg
-                class="switch"
-                width="21"
-                height="21"
-                fill="white"
-                viewBox="0 0 21 21"
-              >
-                <use xlink:href="#promo-btn"></use>
-              </svg>
-            </label>
-
-            <input
-              class="visually-hidden carousel__input"
-              type="radio"
-              name="promo-radio-btn"
-              id="promo-btn2"
-            />
-            <label class="carousel__switch" for="promo-btn2">
-              <svg
-                class="switch"
-                width="21"
-                height="21"
-                fill="white"
-                viewBox="0 0 21 21"
-              >
-                <use xlink:href="#promo-btn"></use>
-              </svg>
-            </label>
-
-            <input
-              class="visually-hidden carousel__input"
-              type="radio"
-              name="promo-radio-btn"
-              id="promo-btn3"
-            />
-            <label class="carousel__switch" for="promo-btn3">
-              <svg
-                class="switch"
-                width="21"
-                height="21"
-                fill="white"
-                viewBox="0 0 21 21"
-              >
-                <use xlink:href="#promo-btn"></use>
-              </svg>
-            </label>
-          </div>
         </section>
 
         <div class="main__content-wrapper">
@@ -481,11 +481,11 @@
 
               <p class="news__title">Новое в нашем блоге</p>
               <article class="blog-article news__blog-article">
-                <article class="blog-article__link" href="#">
+                <a class="blog-article__link" href="#">
                   <h3 class="blog-article__title">
                     10 способов сервировки фруктовых щербетов к столу
                   </h3>
-                </article>
+                </a>
               </article>
             </section>
 
@@ -521,7 +521,7 @@
           <section class="contacts main__contacts">
             <h2 class="visually-hidden">Контакты</h2>
 
-            <div class="contacts__map"><!-- Здесь будет карта --></div>
+            <div class="contacts__map"></div>
 
             <div class="contacts__wrapper">
               <dl class="contacts__info">
