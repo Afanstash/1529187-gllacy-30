@@ -4,7 +4,6 @@
     <meta charset="utf-8" />
     <title>HTML Academy: Глейси</title>
     <link rel="stylesheet" href="./css/style.css" />
-
     <link
       rel="apple-touch-icon"
       sizes="180x180"
@@ -44,8 +43,9 @@
               <a
                 class="base-link main-navigation__link main-navigation__link-catalog"
                 href="#"
-                >Каталог</a
               >
+                Каталог
+              </a>
 
               <ul class="base-list inner-list main-navigation__inner-list">
                 <li class="inner-list__item inner-list__item--special">
@@ -71,9 +71,9 @@
             </li>
 
             <li class="main-navigation__item">
-              <a class="base-link main-navigation__link" href="#"
-                >Доставка и оплата</a
-              >
+              <a class="base-link main-navigation__link" href="#">
+                Доставка и оплата
+              </a>
             </li>
 
             <li class="main-navigation__item">
@@ -189,7 +189,7 @@
 
         <div class="info header__info">
           <p class="info__time">С 10 до 20, ежедневно</p>
-          <p class="info__phone">8 812 450-25-25</p>
+          <a href=":tel88124502525" class="info__phone">8 812 450-25-25</a>
         </div>
       </header>
 
@@ -200,16 +200,9 @@
           <h2 class="visually-hidden">Промо-товары</h2>
 
           <div class="carousel__switches">
-            <input
-              class="visually-hidden carousel__input"
-              type="radio"
-              name="promo-radio-btn"
-              id="promo-btn1"
-              checked
-            />
-            <label class="carousel__switch" for="promo-btn1">
+            <button class="carousel__switch" type="button">
               <svg
-                class="switch"
+                class="switch switch--active"
                 width="21"
                 height="21"
                 fill="white"
@@ -217,15 +210,9 @@
               >
                 <use xlink:href="#promo-btn"></use>
               </svg>
-            </label>
+            </button>
 
-            <input
-              class="visually-hidden carousel__input"
-              type="radio"
-              name="promo-radio-btn"
-              id="promo-btn2"
-            />
-            <label class="carousel__switch" for="promo-btn2">
+            <button class="carousel__switch" type="button">
               <svg
                 class="switch"
                 width="21"
@@ -235,15 +222,9 @@
               >
                 <use xlink:href="#promo-btn"></use>
               </svg>
-            </label>
+            </button>
 
-            <input
-              class="visually-hidden carousel__input"
-              type="radio"
-              name="promo-radio-btn"
-              id="promo-btn3"
-            />
-            <label class="carousel__switch" for="promo-btn3">
+            <button class="carousel__switch" type="button">
               <svg
                 class="switch"
                 width="21"
@@ -253,7 +234,7 @@
               >
                 <use xlink:href="#promo-btn"></use>
               </svg>
-            </label>
+            </button>
           </div>
 
           <ul class="base-list carousel__slide-list">
@@ -535,7 +516,7 @@
 
                 <dt class="contacts__title">Для заказов по телефону:</dt>
                 <dd class="contacts__text">
-                  8 812 450-25-25
+                  <a href=":tel88124502525">8 812 450-25-25</a>
                   <span>(с 10 до 20 ежедневно)</span>
                 </dd>
               </dl>
