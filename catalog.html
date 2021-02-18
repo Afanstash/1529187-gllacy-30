@@ -26,7 +26,7 @@
   </head>
 
   <body class="page__body">
-    <div class="page__container">
+    <div class="page__container page__catalog-container">
       <header class="header page__header">
         <a class="header__logo" href="./index.html">
           <img
@@ -42,9 +42,9 @@
             <li class="main-navigation__item">
               <a
                 class="base-link main-navigation__link main-navigation__link-catalog"
-                href="#"
-                >Каталог</a
               >
+                Каталог
+              </a>
 
               <ul class="base-list inner-list main-navigation__inner-list">
                 <li class="inner-list__item inner-list__item--special">
@@ -52,7 +52,7 @@
                 </li>
 
                 <li class="inner-list__item">
-                  <a class="inner-list__link" href="catalog.html">Сливочное</a>
+                  <a class="inner-list__link">Сливочное</a>
                 </li>
 
                 <li class="inner-list__item">
@@ -70,9 +70,9 @@
             </li>
 
             <li class="main-navigation__item">
-              <a class="base-link main-navigation__link" href="#"
-                >Доставка и оплата</a
-              >
+              <a class="base-link main-navigation__link" href="#">
+                Доставка и оплата
+              </a>
             </li>
 
             <li class="main-navigation__item">
@@ -89,7 +89,7 @@
               tabindex="0"
             >
               <svg
-                class="user-navigation__button--search"
+                class="user-navigation__icon-search"
                 width="16"
                 height="16"
                 viewBox="0 0 16 16"
@@ -120,7 +120,7 @@
               href="#"
             >
               <svg
-                class="user-navigation__button--sign"
+                class="user-navigation__icon-sign"
                 width="20"
                 height="19"
                 viewBox="0 0 20 19"
@@ -137,13 +137,13 @@
               name="form-sign"
             >
               <input
-                class="field sign-form__field"
+                class="field sign-form__field sign-form__field-email"
                 type="text"
                 name="sign-email"
                 placeholder="example@email.com"
               />
               <input
-                class="field sign-form__field"
+                class="field sign-form__field sign-form__field-password"
                 type="password"
                 name="sign-password"
                 placeholder="......"
@@ -153,17 +153,28 @@
                 Войти
               </button>
 
-              <a class="base-link sign-form__link" href="#">Забыли пароль?</a>
-              <a class="base-link sign-form__link" href="#"
-                >Новая регистрация</a
-              >
+              <ul class="base-list sign-form__help-list">
+                <li>
+                  <a class="base-link sign-form__link" href="#">
+                    Забыли пароль?
+                  </a>
+                </li>
+                <li>
+                  <a class="base-link sign-form__link" href="#">
+                    Новая регистрация
+                  </a>
+                </li>
+              </ul>
             </form>
           </li>
 
           <li class="user-navigation__item cart-nonzero">
-            <a class="user-navigation__cart" href="#">
+            <a
+              class="user-navigation__button user-navigation__button-cart"
+              href="#"
+            >
               <svg
-                class="user-navigation__button--cart"
+                class="user-navigation__icon-cart"
                 width="21"
                 height="20"
                 viewBox="0 0 21 20"
@@ -208,7 +219,10 @@
                   </p>
                   <p class="product-list__total">300 руб.</p>
                   <button class="product-list__button-close" type="button">
-                    Удалить из корзины
+                    <span class="visually-hidden">Удалить из корзины</span>
+                    <svg width="11" height="11" viewport="0 0 11 11">
+                      <use xlink:href="#button-close"></use>
+                    </svg>
                   </button>
                 </li>
 
@@ -228,7 +242,10 @@
                   </p>
                   <p class="product-list__total">450 руб.</p>
                   <button class="product-list__button-close" type="button">
-                    Удалить из корзины
+                    <span class="visually-hidden">Удалить из корзины</span>
+                    <svg width="11" height="11" viewport="0 0 11 11">
+                      <use xlink:href="#button-close"></use>
+                    </svg>
                   </button>
                 </li>
               </ul>
@@ -242,12 +259,12 @@
         </ul>
 
         <div class="info header__info">
-          <p class="info__time">С 10 до 20 ежедневно</p>
-          <p class="info__phone">8 812 450-25-25</p>
+          <p class="info__time">С 10 до 20, ежедневно</p>
+          <a href=":tel88124502525" class="info__phone">8 812 450-25-25</a>
         </div>
       </header>
 
-      <main class="main page__main">
+      <main class="main page__main-catalog">
         <ul class="base-list crumbs main__crumbs">
           <li class="crumbs__item">
             <a class="link" href="index.html">Главная</a>
@@ -406,15 +423,16 @@
             <fieldset class="filters-form__section filters-form__section-fat">
               <legend class="filters-form__title">Жирность:</legend>
 
+              <input
+                class="visually-hidden radio__input"
+                type="radio"
+                name="filters-fat"
+                id="fat_zero"
+              />
               <label
                 class="radio filters-form__label filters-form__radio"
                 for="fat_zero"
-                ><input
-                  class="visually-hidden radio__input"
-                  type="radio"
-                  name="filters-fat"
-                  id="fat_zero"
-                />
+              >
                 <svg
                   class="filters-form__radio-icon"
                   width="22"
@@ -426,16 +444,17 @@
                 0%
               </label>
 
+              <input
+                class="visually-hidden radio__input"
+                type="radio"
+                name="filters-fat"
+                id="fat_upto-ten"
+                checked
+              />
               <label
                 class="radio filters-form__label filters-form__radio"
                 for="fat_upto-ten"
-                ><input
-                  class="visually-hidden radio__input"
-                  type="radio"
-                  name="filters-fat"
-                  id="fat_upto-ten"
-                  checked
-                />
+              >
                 <svg
                   class="filters-form__radio-icon"
                   width="22"
@@ -447,16 +466,16 @@
                 до 10%
               </label>
 
+              <input
+                class="visually-hidden radio__input"
+                type="radio"
+                name="filters-fat"
+                id="fat_upto-thirty"
+              />
               <label
                 class="radio filters-form__label filters-form__radio"
                 for="fat_upto-thirty"
               >
-                <input
-                  class="visually-hidden radio__input"
-                  type="radio"
-                  name="filters-fat"
-                  id="fat_upto-thirty"
-                />
                 <svg
                   class="filters-form__radio-icon"
                   width="22"
@@ -468,16 +487,16 @@
                 до 30%
               </label>
 
+              <input
+                class="visually-hidden radio__input"
+                type="radio"
+                name="filters-fat"
+                id="fat_over-thirty"
+              />
               <label
                 class="radio filters-form__label filters-form__radio"
                 for="fat_over-thirty"
               >
-                <input
-                  class="visually-hidden radio__input"
-                  type="radio"
-                  name="filters-fat"
-                  id="fat_over-thirty"
-                />
                 <svg
                   class="filters-form__radio-icon"
                   width="22"
@@ -493,106 +512,70 @@
             <fieldset class="filters-form__section filters-form__section-fill">
               <legend class="filters-form__title">Наполнители:</legend>
 
+              <input
+                class="visually-hidden checkbox__input"
+                type="checkbox"
+                name="filters-choco"
+                id="fill_choco"
+                checked
+              />
               <label
                 class="checkbox filters-form__label filters-form__checkbox"
                 for="fill_choco"
               >
-                <input
-                  class="visually-hidden checkbox__input"
-                  type="checkbox"
-                  name="filters-choco"
-                  id="fill_choco"
-                  checked
-                />
-                <svg
-                  class="filters-form__checkbox-icon"
-                  width="24"
-                  height="20"
-                  viewport="0 0 24 20"
-                >
-                  <use xlink:href="#filter-checkbox"></use>
-                </svg>
                 шоколадные
               </label>
 
+              <input
+                class="visually-hidden checkbox__input"
+                type="checkbox"
+                name="filters-sugar"
+                id="fill_sugar"
+                checked
+              />
               <label
                 class="checkbox filters-form__label filters-form__checkbox"
                 for="fill_sugar"
-                ><input
-                  class="visually-hidden checkbox__input"
-                  type="checkbox"
-                  name="filters-sugar"
-                  id="fill_sugar"
-                  checked
-                />
-                <svg
-                  class="filters-form__checkbox-icon"
-                  width="24"
-                  height="20"
-                  viewport="0 0 24 20"
-                >
-                  <use xlink:href="#filter-checkbox"></use>
-                </svg>
+              >
                 сахарные присыпки
               </label>
 
+              <input
+                class="visually-hidden checkbox__input"
+                type="checkbox"
+                name="filters-fruity"
+                id="fill_fruity"
+              />
               <label
                 class="checkbox filters-form__label filters-form__checkbox"
                 for="fill_fruity"
-                ><input
-                  class="visually-hidden checkbox__input"
-                  type="checkbox"
-                  name="filters-fruity"
-                  id="fill_fruity"
-                />
-                <svg
-                  class="filters-form__checkbox-icon"
-                  width="24"
-                  height="20"
-                  viewport="0 0 24 20"
-                >
-                  <use xlink:href="#filter-checkbox"></use>
-                </svg>
+              >
                 фрукты
               </label>
 
+              <input
+                class="visually-hidden checkbox__input"
+                type="checkbox"
+                name="filters-syrop"
+                id="fill_syrop"
+              />
               <label
                 class="checkbox filters-form__label filters-form__checkbox"
                 for="fill_syrop"
-                ><input
-                  class="visually-hidden checkbox__input"
-                  type="checkbox"
-                  name="filters-syrop"
-                  id="fill_syrop"
-                />
-                <svg
-                  class="filters-form__checkbox-icon"
-                  width="24"
-                  height="20"
-                  viewport="0 0 24 20"
-                >
-                  <use xlink:href="#filter-checkbox"></use>
-                </svg>
+              >
                 сиропы
               </label>
 
+              <input
+                class="visually-hidden checkbox__input"
+                type="checkbox"
+                name="filters-jam"
+                id="fill_jam"
+              />
               <label
                 class="checkbox filters-form__label filters-form__checkbox"
                 for="fill_jam"
-                ><input
-                  class="visually-hidden checkbox__input"
-                  type="checkbox"
-                  name="filters-jam"
-                  id="fill_jam"
-                />
-                <svg
-                  class="filters-form__checkbox-icon"
-                  width="24"
-                  height="20"
-                  viewport="0 0 24 20"
-                >
-                  <use xlink:href="#filter-checkbox"></use>
-                </svg>
+              >
                 джемы
               </label>
             </fieldset>
@@ -615,15 +598,17 @@
                 width="267"
                 height="267"
               />
-              <p class="product-card__price">310 ₽<span>/кг</span></p>
-              <h3 class="product-card__name">
-                <a class="link product-card__link" href="#">
-                  Сливочное с апельсиновым джемом и цитрусовой стружкой
-                </a>
-              </h3>
-              <button class="button product-card__button" type="button">
-                Быстрый просмотр
-              </button>
+              <div class="product-card__wrapper">
+                <p class="product-card__price">310 ₽<span>/кг</span></p>
+                <h3 class="product-card__name">
+                  <a class="link product-card__link" href="#">
+                    Сливочное с апельсиновым джемом и цитрусовой стружкой
+                  </a>
+                </h3>
+                <button class="button product-card__button" type="button">
+                  Быстрый просмотр
+                </button>
+              </div>
             </li>
 
             <li class="product-card products__item">
@@ -634,15 +619,17 @@
                 width="267"
                 height="267"
               />
-              <p class="product-card__price">380 ₽<span>/кг</span></p>
-              <h3 class="product-card__name">
-                <a class="link product-card__link" href="#">
-                  Сливочно-кофейное с кусочками шоколада
-                </a>
-              </h3>
-              <button class="button product-card__button" type="button">
-                Быстрый просмотр
-              </button>
+              <div class="product-card__wrapper">
+                <p class="product-card__price">380 ₽<span>/кг</span></p>
+                <h3 class="product-card__name">
+                  <a class="link product-card__link" href="#">
+                    Сливочно-кофейное с кусочками шоколада
+                  </a>
+                </h3>
+                <button class="button product-card__button" type="button">
+                  Быстрый просмотр
+                </button>
+              </div>
             </li>
 
             <li class="product-card products__item">
@@ -653,15 +640,17 @@
                 width="267"
                 height="267"
               />
-              <p class="product-card__price">355 ₽<span>/кг</span></p>
-              <h3 class="product-card__name">
-                <a class="link product-card__link" href="#">
-                  Сливочно-клубничное с присыпкой из белого шоколада
-                </a>
-              </h3>
-              <button class="button product-card__button" type="button">
-                Быстрый просмотр
-              </button>
+              <div class="product-card__wrapper">
+                <p class="product-card__price">355 ₽<span>/кг</span></p>
+                <h3 class="product-card__name">
+                  <a class="link product-card__link" href="#">
+                    Сливочно-клубничное с присыпкой из белого шоколада
+                  </a>
+                </h3>
+                <button class="button product-card__button" type="button">
+                  Быстрый просмотр
+                </button>
+              </div>
             </li>
 
             <li class="product-card products__item">
@@ -672,15 +661,17 @@
                 width="267"
                 height="267"
               />
-              <p class="product-card__price">415 ₽<span>/кг</span></p>
-              <h3 class="product-card__name">
-                <a class="link product-card__link" href="#">
-                  Сливочное крем-брюле с карамельной подливкой
-                </a>
-              </h3>
-              <button class="button product-card__button" type="button">
-                Быстрый просмотр
-              </button>
+              <div class="product-card__wrapper">
+                <p class="product-card__price">415 ₽<span>/кг</span></p>
+                <h3 class="product-card__name">
+                  <a class="link product-card__link" href="#">
+                    Сливочное крем-брюле с карамельной подливкой
+                  </a>
+                </h3>
+                <button class="button product-card__button" type="button">
+                  Быстрый просмотр
+                </button>
+              </div>
             </li>
 
             <li class="product-card products__item">
@@ -691,15 +682,17 @@
                 width="267"
                 height="267"
               />
-              <p class="product-card__price">325 ₽<span>/кг</span></p>
-              <h3 class="product-card__name">
-                <a class="link product-card__link" href="#">
-                  Сливочное с брусничным джемом
-                </a>
-              </h3>
-              <button class="button product-card__button" type="button">
-                Быстрый просмотр
-              </button>
+              <div class="product-card__wrapper">
+                <p class="product-card__price">325 ₽<span>/кг</span></p>
+                <h3 class="product-card__name">
+                  <a class="link product-card__link" href="#">
+                    Сливочное с брусничным джемом
+                  </a>
+                </h3>
+                <button class="button product-card__button" type="button">
+                  Быстрый просмотр
+                </button>
+              </div>
             </li>
 
             <li class="product-card products__item">
@@ -710,15 +703,17 @@
                 width="267"
                 height="267"
               />
-              <p class="product-card__price">410 ₽<span>/кг</span></p>
-              <h3 class="product-card__name">
-                <a class="link product-card__link" href="#">
-                  Сливочно-черничное с цельными ягодами черники
-                </a>
-              </h3>
-              <button class="button product-card__button" type="button">
-                Быстрый просмотр
-              </button>
+              <div class="product-card__wrapper">
+                <p class="product-card__price">410 ₽<span>/кг</span></p>
+                <h3 class="product-card__name">
+                  <a class="link product-card__link" href="#">
+                    Сливочно-черничное с цельными ягодами черники
+                  </a>
+                </h3>
+                <button class="button product-card__button" type="button">
+                  Быстрый просмотр
+                </button>
+              </div>
             </li>
 
             <li class="product-card products__item">
@@ -729,15 +724,17 @@
                 width="267"
                 height="267"
               />
-              <p class="product-card__price">315 ₽<span>/кг</span></p>
-              <h3 class="product-card__name">
-                <a class="link product-card__link" href="#">
-                  Сливочно-лимонное с карамельной присыпкой
-                </a>
-              </h3>
-              <button class="button product-card__button" type="button">
-                Быстрый просмотр
-              </button>
+              <div class="product-card__wrapper">
+                <p class="product-card__price">315 ₽<span>/кг</span></p>
+                <h3 class="product-card__name">
+                  <a class="link product-card__link" href="#">
+                    Сливочно-лимонное с карамельной присыпкой
+                  </a>
+                </h3>
+                <button class="button product-card__button" type="button">
+                  Быстрый просмотр
+                </button>
+              </div>
             </li>
 
             <li class="product-card products__item">
@@ -748,15 +745,17 @@
                 width="267"
                 height="267"
               />
-              <p class="product-card__price">320 ₽<span>/кг</span></p>
-              <h3 class="product-card__name">
-                <a class="link product-card__link" href="#">
-                  Сливочное с шоколадной стружкой
-                </a>
-              </h3>
-              <button class="button product-card__button" type="button">
-                Быстрый просмотр
-              </button>
+              <div class="product-card__wrapper">
+                <p class="product-card__price">320 ₽<span>/кг</span></p>
+                <h3 class="product-card__name">
+                  <a class="link product-card__link" href="#">
+                    Сливочное с шоколадной стружкой
+                  </a>
+                </h3>
+                <button class="button product-card__button" type="button">
+                  Быстрый просмотр
+                </button>
+              </div>
             </li>
 
             <li class="product-card products__item">
@@ -767,15 +766,17 @@
                 width="267"
                 height="267"
               />
-              <p class="product-card__price">440 ₽<span>/кг</span></p>
-              <h3 class="product-card__name">
-                <a class="link product-card__link" href="#">
-                  Сливочно-ванильное с кусочками шоколада
-                </a>
-              </h3>
-              <button class="button product-card__button" type="button">
-                Быстрый просмотр
-              </button>
+              <div class="product-card__wrapper">
+                <p class="product-card__price">440 ₽<span>/кг</span></p>
+                <h3 class="product-card__name">
+                  <a class="link product-card__link" href="#">
+                    Сливочно-ванильное с кусочками шоколада
+                  </a>
+                </h3>
+                <button class="button product-card__button" type="button">
+                  Быстрый просмотр
+                </button>
+              </div>
             </li>
 
             <li class="product-card products__item">
@@ -786,15 +787,17 @@
                 width="267"
                 height="267"
               />
-              <p class="product-card__price">435 ₽<span>/кг</span></p>
-              <h3 class="product-card__name">
-                <a class="link product-card__link" href="#">
-                  Сливочноe с ментоловым сиропом
-                </a>
-              </h3>
-              <button class="button product-card__button" type="button">
-                Быстрый просмотр
-              </button>
+              <div class="product-card__wrapper">
+                <p class="product-card__price">435 ₽<span>/кг</span></p>
+                <h3 class="product-card__name">
+                  <a class="link product-card__link" href="#">
+                    Сливочноe с ментоловым сиропом
+                  </a>
+                </h3>
+                <button class="button product-card__button" type="button">
+                  Быстрый просмотр
+                </button>
+              </div>
             </li>
 
             <li class="product-card products__item">
@@ -805,15 +808,17 @@
                 width="267"
                 height="267"
               />
-              <p class="product-card__price">355 ₽<span>/кг</span></p>
-              <h3 class="product-card__name">
-                <a class="link product-card__link" href="#">
-                  Сливочное с кусочками черного шоколада
-                </a>
-              </h3>
-              <button class="button product-card__button" type="button">
-                Быстрый просмотр
-              </button>
+              <div class="product-card__wrapper">
+                <p class="product-card__price">355 ₽<span>/кг</span></p>
+                <h3 class="product-card__name">
+                  <a class="link product-card__link" href="#">
+                    Сливочное с кусочками черного шоколада
+                  </a>
+                </h3>
+                <button class="button product-card__button" type="button">
+                  Быстрый просмотр
+                </button>
+              </div>
             </li>
 
             <li class="product-card products__item">
@@ -824,20 +829,34 @@
                 width="267"
                 height="267"
               />
-              <p class="product-card__price">420 ₽<span>/кг</span></p>
-              <h3 class="product-card__name">
-                <a class="link product-card__link" href="#">
-                  Сливочное с мятным сиропом
-                </a>
-              </h3>
-              <button class="button product-card__button" type="button">
-                Быстрый просмотр
-              </button>
+              <div class="product-card__wrapper">
+                <p class="product-card__price">420 ₽<span>/кг</span></p>
+                <h3 class="product-card__name">
+                  <a class="link product-card__link" href="#">
+                    Сливочное с мятным сиропом
+                  </a>
+                </h3>
+                <button class="button product-card__button" type="button">
+                  Быстрый просмотр
+                </button>
+              </div>
             </li>
           </ul>
 
           <div class="pagination products__pagination">
-            <button class="pagination__back" type="button">
+            <button
+              class="pagination__button pagination__button--disabled"
+              type="button"
+            >
+              <svg
+                width="7"
+                height="12"
+                viewBox="0 0 7 12"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <use xlink:href="#paginations-left"></use>
+              </svg>
               <span class="visually-hidden">Назад</span>
             </button>
 
@@ -859,8 +878,17 @@
               </li>
             </ul>
 
-            <button class="pagination__forward" type="button">
+            <button class="pagination__button" type="button">
               <span class="visually-hidden">Вперед</span>
+              <svg
+                width="7"
+                height="12"
+                viewBox="0 0 7 12"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <use xlink:href="#paginations-right"></use>
+              </svg>
             </button>
           </div>
         </section>
@@ -947,15 +975,15 @@
               </a>
             </li>
             <li class="extra__item">
-              <a class="base-link extra__link" href="#">О производстве</a>
+              <a class="base-link extra__link" href="#"> О производстве </a>
             </li>
             <li class="extra__item">
-              <a class="base-link extra__link" href="#">Наши документы</a>
+              <a class="base-link extra__link" href="#"> Наши документы </a>
             </li>
             <li class="extra__item">
-              <a class="base-link extra__link" href="#"
-                >Экологические стандарты</a
-              >
+              <a class="base-link extra__link" href="#">
+                Экологические стандарты
+              </a>
             </li>
           </ul>
         </section>
@@ -1062,24 +1090,28 @@
       <path
         d="M11 3.52a7.48 7.48 0 110 14.96 7.48 7.48 0 010-14.96zM11 0a11 11 0 100 22 11 11 0 000-22z"
         fill="#fff"
-        fill-opacity=".8"
       />
       <path
         d="M11 14.96a3.96 3.96 0 100-7.92 3.96 3.96 0 000 7.92z"
         fill="currentColor"
-        fill-opacity=".8"
       />
     </symbol>
-    <symbol id="filter-checkbox">
+    <symbol id="button-close">
       <path
-        d="M6.69 6.51l-2.6 2.46 7.14 6.77L24 3.63l-2.6-2.46-10.17 9.65-4.54-4.3z"
-        fill="currentColor"
-        fill-opacity=".8"
+        d="M11 .71L10.29 0 5.5 4.79.71 0 0 .71 4.79 5.5 0 10.29l.71.71L5.5 6.21 10.29 11l.71-.71L6.21 5.5 11 .71z"
+        fill="#323232"
       />
+    </symbol>
+    <symbol id="paginations-left">
       <path
-        d="M19.26 17.4c0 .22-.1.44-.27.6a.94.94 0 01-.65.26H2.75a.94.94 0 01-.65-.25.85.85 0 01-.27-.62V2.61c0-.23.1-.45.27-.62.17-.16.4-.25.65-.25h15.5L19.72.36A2.87 2.87 0 0018.34 0H2.75C2.02 0 1.32.27.81.76.29 1.26 0 1.92 0 2.61v14.78c0 .7.29 1.36.8 1.85.52.49 1.22.76 1.95.76h15.6c.72 0 1.42-.27 1.94-.76.51-.5.8-1.16.8-1.85V8.84l-1.83 1.74v6.81z"
-        fill="#fff"
-        fill-opacity=".8"
+        d="M0.15889 6.34125L6.06761 11.8512C6.1703 11.9465 6.30937 12 6.45436 12C6.59934 12 6.73841 11.9465 6.84111 11.8512C6.89146 11.8048 6.93142 11.7495 6.95869 11.6885C6.98596 11.6276 7 11.5623 7 11.4962C7 11.4302 6.98596 11.3649 6.95869 11.304C6.93142 11.243 6.89146 11.1877 6.84111 11.1412L1.3084 6.00125L6.84111 0.831247C6.89146 0.784766 6.93142 0.729465 6.95869 0.668535C6.98596 0.607606 7 0.542253 7 0.476248C7 0.410242 6.98596 0.344889 6.95869 0.283959C6.93142 0.22303 6.89146 0.167728 6.84111 0.121247C6.73357 0.0364304 6.59506 -0.00654793 6.45436 0.00124741C6.38391 0.000448227 6.31406 0.013381 6.2493 0.0392141C6.18454 0.0650473 6.12631 0.103209 6.07835 0.151247L0.15889 5.63125C0.108543 5.67773 0.0685816 5.73303 0.0413108 5.79396C0.01404 5.85489 0 5.92024 0 5.98625C0 6.05225 0.01404 6.11761 0.0413108 6.17854C0.0685816 6.23947 0.108543 6.29477 0.15889 6.34125Z"
+        fill="white"
+      />
+    </symbol>
+    <symbol id="paginations-right">
+      <path
+        d="M6.84111 5.65875L0.932395 0.148752C0.829699 0.05349 0.690626 0 0.545642 0C0.400659 0 0.261586 0.05349 0.15889 0.148752C0.108543 0.195234 0.0685817 0.250534 0.041311 0.311464C0.0140403 0.372393 0 0.437746 0 0.503752C0 0.569758 0.0140403 0.635111 0.041311 0.69604C0.0685817 0.75697 0.108543 0.812271 0.15889 0.858752L5.6916 5.99875L0.15889 11.1688C0.108543 11.2152 0.0685817 11.2705 0.041311 11.3315C0.0140403 11.3924 0 11.4577 0 11.5238C0 11.5898 0.0140403 11.6551 0.041311 11.716C0.0685817 11.777 0.108543 11.8323 0.15889 11.8788C0.266426 11.9636 0.404942 12.0065 0.545642 11.9988C0.616091 11.9996 0.68594 11.9866 0.750698 11.9608C0.815455 11.935 0.873688 11.8968 0.921651 11.8488L6.84111 6.36875C6.89146 6.32227 6.93142 6.26697 6.95869 6.20604C6.98596 6.14511 7 6.07976 7 6.01375C7 5.94775 6.98596 5.88239 6.95869 5.82146C6.93142 5.76053 6.89146 5.70523 6.84111 5.65875Z"
+        fill="white"
       />
     </symbol>
   </svg>

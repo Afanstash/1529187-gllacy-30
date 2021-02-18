@@ -4,7 +4,6 @@
     <meta charset="utf-8" />
     <title>HTML Academy: Глейси</title>
     <link rel="stylesheet" href="./css/style.css" />
-
     <link
       rel="apple-touch-icon"
       sizes="180x180"
@@ -43,8 +42,9 @@
               <a
                 class="base-link main-navigation__link main-navigation__link-catalog"
                 href="#"
-                >Каталог</a
               >
+                Каталог
+              </a>
 
               <ul class="base-list inner-list main-navigation__inner-list">
                 <li class="inner-list__item inner-list__item--special">
@@ -70,9 +70,9 @@
             </li>
 
             <li class="main-navigation__item">
-              <a class="base-link main-navigation__link" href="#"
-                >Доставка и оплата</a
-              >
+              <a class="base-link main-navigation__link" href="#">
+                Доставка и оплата
+              </a>
             </li>
 
             <li class="main-navigation__item">
@@ -89,7 +89,7 @@
               tabindex="0"
             >
               <svg
-                class="user-navigation__button--search"
+                class="user-navigation__icon-search"
                 width="16"
                 height="16"
                 viewBox="0 0 16 16"
@@ -120,7 +120,7 @@
               href="#"
             >
               <svg
-                class="user-navigation__button--sign"
+                class="user-navigation__icon-sign"
                 width="20"
                 height="19"
                 viewBox="0 0 20 19"
@@ -137,13 +137,13 @@
               name="form-sign"
             >
               <input
-                class="field sign-form__field"
+                class="field sign-form__field sign-form__field-email"
                 type="text"
                 name="sign-email"
                 placeholder="example@email.com"
               />
               <input
-                class="field sign-form__field"
+                class="field sign-form__field sign-form__field-password"
                 type="password"
                 name="sign-password"
                 placeholder="......"
@@ -153,17 +153,28 @@
                 Войти
               </button>
 
-              <a class="base-link sign-form__link" href="#">Забыли пароль?</a>
-              <a class="base-link sign-form__link" href="#"
-                >Новая регистрация</a
-              >
+              <ul class="base-list sign-form__help-list">
+                <li>
+                  <a class="base-link sign-form__link" href="#"
+                    >Забыли пароль?</a
+                  >
+                </li>
+                <li>
+                  <a class="base-link sign-form__link" href="#"
+                    >Новая регистрация</a
+                  >
+                </li>
+              </ul>
             </form>
           </li>
 
           <li class="user-navigation__item">
-            <a class="user-navigation__cart" href="#">
+            <a
+              class="user-navigation__button user-navigation__button-cart"
+              href="#"
+            >
               <svg
-                class="user-navigation__button--cart"
+                class="user-navigation__icon-cart"
                 width="21"
                 height="20"
                 viewBox="0 0 21 20"
@@ -176,8 +187,8 @@
         </ul>
 
         <div class="info header__info">
-          <p class="info__time">С 10 до 20 ежедневно</p>
-          <p class="info__phone">8 812 450-25-25</p>
+          <p class="info__time">С 10 до 20, ежедневно</p>
+          <a href=":tel88124502525" class="info__phone">8 812 450-25-25</a>
         </div>
       </header>
 
@@ -186,6 +197,44 @@
 
         <section class="carousel main__carousel">
           <h2 class="visually-hidden">Промо-товары</h2>
+
+          <div class="carousel__switches">
+            <button class="carousel__switch" type="button">
+              <svg
+                class="switch switch--active"
+                width="21"
+                height="21"
+                fill="white"
+                viewBox="0 0 21 21"
+              >
+                <use xlink:href="#promo-btn"></use>
+              </svg>
+            </button>
+
+            <button class="carousel__switch" type="button">
+              <svg
+                class="switch"
+                width="21"
+                height="21"
+                fill="white"
+                viewBox="0 0 21 21"
+              >
+                <use xlink:href="#promo-btn"></use>
+              </svg>
+            </button>
+
+            <button class="carousel__switch" type="button">
+              <svg
+                class="switch"
+                width="21"
+                height="21"
+                fill="white"
+                viewBox="0 0 21 21"
+              >
+                <use xlink:href="#promo-btn"></use>
+              </svg>
+            </button>
+          </div>
 
           <ul class="base-list carousel__slide-list">
             <li class="slide carousel__slide slide-1">
@@ -199,12 +248,14 @@
                 />
               </div>
 
-              <h3 class="slide__title">
-                Крем брюле и пломбир с малиновым джемом
-              </h3>
-              <button class="button carousel__button" type="button">
-                Давайте оба!
-              </button>
+              <div class="slide__wrapper">
+                <h3 class="slide__title">
+                  Крем брюле и пломбир с малиновым джемом
+                </h3>
+                <button class="button carousel__button" type="button">
+                  Давайте оба!
+                </button>
+              </div>
             </li>
 
             <li class="slide carousel__slide slide-2">
@@ -218,10 +269,14 @@
                 />
               </div>
 
-              <h3 class="slide__title">Шоколадный пломбир и лимонный сорбет</h3>
-              <button class="button carousel__button" type="button">
-                Давайте оба!
-              </button>
+              <div class="slide__wrapper">
+                <h3 class="slide__title">
+                  Шоколадный пломбир и лимонный сорбет
+                </h3>
+                <button class="button carousel__button" type="button">
+                  Давайте оба!
+                </button>
+              </div>
             </li>
 
             <li class="slide carousel__slide slide-3">
@@ -235,287 +290,242 @@
                 />
               </div>
 
-              <h3 class="slide__title">
-                Пломбир с помадкой и клубничный щербет
-              </h3>
-              <button class="button carousel__button" type="button">
-                Давайте оба!
-              </button>
-            </li>
-          </ul>
-
-          <div class="carousel__switches">
-            <input
-              class="visually-hidden carousel__input"
-              type="radio"
-              name="promo-radio-btn"
-              id="promo-btn1"
-              checked
-            />
-            <label class="carousel__switch" for="promo-btn1">
-              <svg
-                class="switch"
-                width="21"
-                height="21"
-                fill="white"
-                viewBox="0 0 21 21"
-              >
-                <use xlink:href="#promo-btn"></use>
-              </svg>
-            </label>
-
-            <input
-              class="visually-hidden carousel__input"
-              type="radio"
-              name="promo-radio-btn"
-              id="promo-btn2"
-            />
-            <label class="carousel__switch" for="promo-btn2">
-              <svg
-                class="switch"
-                width="21"
-                height="21"
-                fill="white"
-                viewBox="0 0 21 21"
-              >
-                <use xlink:href="#promo-btn"></use>
-              </svg>
-            </label>
-
-            <input
-              class="visually-hidden carousel__input"
-              type="radio"
-              name="promo-radio-btn"
-              id="promo-btn3"
-            />
-            <label class="carousel__switch" for="promo-btn3">
-              <svg
-                class="switch"
-                width="21"
-                height="21"
-                fill="white"
-                viewBox="0 0 21 21"
-              >
-                <use xlink:href="#promo-btn"></use>
-              </svg>
-            </label>
-          </div>
-        </section>
-
-        <section class="sales main__sales">
-          <h2 class="visually-hidden">Акции</h2>
-
-          <ul class="base-list sales__items">
-            <li class="sales__item sales__raspberry">
-              <h3 class="sales__title">Малинка даром!</h3>
-              <p class="sales__text">
-                При покупке 2 кг любого фруктового мороженного, добавим в ваш
-                заказ банку малинового варенья бесплатно.
-              </p>
-              <button class="button sales__button" type="button">
-                Хочу варенья!
-              </button>
-            </li>
-
-            <li class="sales__item sales__choco">
-              <h3 class="sales__title">Шоколадки даром!</h3>
-              <p class="sales__text">
-                При покупке 2 кг пломбира, добавим в ваш заказ упаковку
-                вкуснейшей шоколадной присыпки совершенно бесплатно.
-              </p>
-              <button class="button sales__button" type="button">
-                Хочу шоколадки!
-              </button>
+              <div class="slide__wrapper">
+                <h3 class="slide__title">
+                  Пломбир с помадкой и клубничный щербет
+                </h3>
+                <button class="button carousel__button" type="button">
+                  Давайте оба!
+                </button>
+              </div>
             </li>
           </ul>
         </section>
 
-        <section class="bestsellers main__bestsellers">
-          <h2 class="visually-hidden">Хиты продаж</h2>
+        <div class="main__content-wrapper">
+          <section class="sales main__sales">
+            <h2 class="visually-hidden">Акции</h2>
 
-          <ul class="base-list bestsellers__product-list">
-            <li class="product-card product-card--prime">
-              <img
-                class="product-card__pic"
-                src="./img/content/product/orange_jam.jpg"
-                alt="Картинка мороженное сливочное с апельсиновым джемом и цитрусовой стружкой"
-                width="267"
-                height="267"
-              />
-              <p class="product-card__price">310 ₽<span>/кг</span></p>
-              <a class="product-card__link" href="#">
-                <h3 class="product-card__name">
-                  Сливочное с апельсиновым джемом и цитрусовой стружкой
-                </h3>
-              </a>
-              <button class="button product-card__button" type="button">
-                Быстрый просмотр
-              </button>
-            </li>
+            <ul class="base-list sales__items">
+              <li class="sales__item sales__raspberry">
+                <h3 class="sales__title">Малинка даром!</h3>
+                <p class="sales__text">
+                  При покупке 2 кг любого фруктового мороженного, добавим в ваш
+                  заказ банку малинового варенья бесплатно.
+                </p>
+                <button class="button sales__button" type="button">
+                  Хочу варенья!
+                </button>
+              </li>
 
-            <li class="product-card product-card--prime">
-              <img
-                class="product-card__pic"
-                src="./img/content/product/choco_coffee.jpg"
-                alt="Картинка мороженное сливочно-кофейное с кусочками шоколада"
-                width="267"
-                height="267"
-              />
-              <p class="product-card__price">380 ₽<span>/кг</span></p>
-              <a class="product-card__link" href="#">
-                <h3 class="product-card__name">
-                  Сливочно-кофейное с кусочками шоколада
-                </h3>
-              </a>
-              <button class="button product-card__button" type="button">
-                Быстрый просмотр
-              </button>
-            </li>
-
-            <li class="product-card product-card--prime">
-              <img
-                class="product-card__pic"
-                src="./img/content/product/strawberry_white_choco.jpg"
-                alt="Картинка мороженное сливочно-клубничное с присыпкой из белого шоколада"
-                width="267"
-                height="267"
-              />
-              <p class="product-card__price">355 ₽<span>/кг</span></p>
-              <a class="product-card__link" href="#">
-                <h3 class="product-card__name">
-                  Сливочно-клубничное с присыпкой из белого шоколада
-                </h3>
-              </a>
-              <button class="button product-card__button" type="button">
-                Быстрый просмотр
-              </button>
-            </li>
-
-            <li class="product-card product-card--prime">
-              <img
-                class="product-card__pic"
-                src="./img/content/product/blueberry.jpg"
-                alt="Картинка мороженное сливочное крем-брюле с карамельной подливкой"
-                width="267"
-                height="267"
-              />
-              <p class="product-card__price">415 ₽<span>/кг</span></p>
-              <a class="product-card__link" href="#">
-                <h3 class="product-card__name">
-                  Сливочное крем-брюле с карамельной подливкой
-                </h3>
-              </a>
-              <button class="button product-card__button" type="button">
-                Быстрый просмотр
-              </button>
-            </li>
-          </ul>
-        </section>
-
-        <section class="about main__about">
-          <h2 class="visually-hidden">О нас</h2>
-
-          <p class="about__title">
-            Магазин Глэйси – это онлайн и офлайн-магазин по продаже мороженого
-            собственного производства на развес
-          </p>
-
-          <ul class="base-list features">
-            <li class="features__item features__item--tech">
-              Все наше мороженое изготавливается на собственном производстве, с
-              использованием современного оборудования и проверенных временем
-              технологий.
-            </li>
-
-            <li class="features__item features__item--eco">
-              Для приготовления мороженого используются настоящие сливки и
-              молоко высочайшего качества. Все дополнительные ингредиенты и
-              добавки произведены из натурального, экологически чистого сырья.
-            </li>
-
-            <li class="features__item features__item--wrnt">
-              Закупка ингредиентов производится только у проверенных фермерских
-              хозяйств и компаний, с которыми нас связывает долговременное
-              сотрудничество.
-            </li>
-
-            <li class="features__item features__item--delivery">
-              Доставка нашего мороженого до заказчиков осуществляется в
-              специальном термопаке, который не дает мороженому растаять в пути
-              и позволяет сохранить превосходный вкус.
-            </li>
-          </ul>
-        </section>
-
-        <div class="main__wrapper">
-          <section class="news">
-            <h2 class="visually-hidden">Наши новости</h2>
-
-            <p class="news__title">Новое в нашем блоге</p>
-            <article class="blog-article news__blog-article">
-              <a class="blog-article__link" href="#">
-                <h3 class="blog-article__title">
-                  10 способов сервировки фруктовых щербетов к столу
-                </h3>
-              </a>
-            </article>
+              <li class="sales__item sales__choco">
+                <h3 class="sales__title">Шоколадки даром!</h3>
+                <p class="sales__text">
+                  При покупке 2 кг пломбира, добавим в ваш заказ упаковку
+                  вкуснейшей шоколадной присыпки совершенно бесплатно.
+                </p>
+                <button class="button sales__button" type="button">
+                  Хочу шоколадки!
+                </button>
+              </li>
+            </ul>
           </section>
 
-          <section class="subscribe main__subscribe">
-            <h2 class="visually-hidden">Подписка на рассылку</h2>
+          <section class="bestsellers main__bestsellers">
+            <h2 class="visually-hidden">Хиты продаж</h2>
 
-            <div class="subscribe__wrapper">
-              <p class="subscribe__text">
-                Подпишитесь на нашу сладкую рассылку и будьте всегда в курсе
-                всего самого вкусного, что у нас происходит. Обещаем не спамить
-                и не слать всякой ненужной ерунды. Честно =)
-              </p>
-
-              <form
-                class="subscribe-form subscribe__form"
-                action="https://echo.htmlacademy.ru/"
-                method="get"
-                name="form-subscribe"
-              >
-                <input
-                  class="field subscribe-form__field"
-                  type="text"
-                  name="field-email"
+            <ul class="base-list bestsellers__product-list">
+              <li class="product-card product-card--prime">
+                <img
+                  class="product-card__pic"
+                  src="./img/content/product/orange_jam.jpg"
+                  alt="Картинка мороженное сливочное с апельсиновым джемом и цитрусовой стружкой"
+                  width="267"
+                  height="267"
                 />
-                <button class="button subscribe-form__button" type="submit">
-                  Отправить
-                </button>
-              </form>
+                <div class="product-card__wrapper">
+                  <p class="product-card__price">310 ₽<span>/кг</span></p>
+                  <a class="product-card__link" href="#">
+                    <h3 class="product-card__name">
+                      Сливочное с апельсиновым джемом и цитрусовой стружкой
+                    </h3>
+                  </a>
+                  <button class="button product-card__button" type="button">
+                    Быстрый просмотр
+                  </button>
+                </div>
+              </li>
+
+              <li class="product-card product-card--prime">
+                <img
+                  class="product-card__pic"
+                  src="./img/content/product/choco_coffee.jpg"
+                  alt="Картинка мороженное сливочно-кофейное с кусочками шоколада"
+                  width="267"
+                  height="267"
+                />
+                <div class="product-card__wrapper">
+                  <p class="product-card__price">380 ₽<span>/кг</span></p>
+                  <a class="product-card__link" href="#">
+                    <h3 class="product-card__name">
+                      Сливочно-кофейное с кусочками шоколада
+                    </h3>
+                  </a>
+                  <button class="button product-card__button" type="button">
+                    Быстрый просмотр
+                  </button>
+                </div>
+              </li>
+
+              <li class="product-card product-card--prime">
+                <img
+                  class="product-card__pic"
+                  src="./img/content/product/strawberry_white_choco.jpg"
+                  alt="Картинка мороженное сливочно-клубничное с присыпкой из белого шоколада"
+                  width="267"
+                  height="267"
+                />
+                <div class="product-card__wrapper">
+                  <p class="product-card__price">355 ₽<span>/кг</span></p>
+                  <a class="product-card__link" href="#">
+                    <h3 class="product-card__name">
+                      Сливочно-клубничное с присыпкой из белого шоколада
+                    </h3>
+                  </a>
+                  <button class="button product-card__button" type="button">
+                    Быстрый просмотр
+                  </button>
+                </div>
+              </li>
+
+              <li class="product-card product-card--prime">
+                <img
+                  class="product-card__pic"
+                  src="./img/content/product/blueberry.jpg"
+                  alt="Картинка мороженное сливочное крем-брюле с карамельной подливкой"
+                  width="267"
+                  height="267"
+                />
+                <div class="product-card__wrapper">
+                  <p class="product-card__price">415 ₽<span>/кг</span></p>
+                  <a class="product-card__link" href="#">
+                    <h3 class="product-card__name">
+                      Сливочное крем-брюле с карамельной подливкой
+                    </h3>
+                  </a>
+                  <button class="button product-card__button" type="button">
+                    Быстрый просмотр
+                  </button>
+                </div>
+              </li>
+            </ul>
+          </section>
+
+          <section class="about main__about">
+            <h2 class="visually-hidden">О нас</h2>
+
+            <p class="about__title">
+              Магазин Глэйси – это онлайн и офлайн-магазин по продаже мороженого
+              собственного производства на развес
+            </p>
+
+            <ul class="base-list features">
+              <li class="features__item features__item--tech">
+                Все наше мороженое изготавливается на собственном производстве,
+                с использованием современного оборудования и проверенных
+                временем технологий.
+              </li>
+
+              <li class="features__item features__item--eco">
+                Для приготовления мороженого используются настоящие сливки и
+                молоко высочайшего качества. Все дополнительные ингредиенты и
+                добавки произведены из натурального, экологически чистого сырья.
+              </li>
+
+              <li class="features__item features__item--wrnt">
+                Закупка ингредиентов производится только у проверенных
+                фермерских хозяйств и компаний, с которыми нас связывает
+                долговременное сотрудничество.
+              </li>
+
+              <li class="features__item features__item--delivery">
+                Доставка нашего мороженого до заказчиков осуществляется в
+                специальном термопаке, который не дает мороженому растаять в
+                пути и позволяет сохранить превосходный вкус.
+              </li>
+            </ul>
+          </section>
+
+          <div class="main__wrapper">
+            <section class="news">
+              <h2 class="visually-hidden">Наши новости</h2>
+
+              <p class="news__title">Новое в нашем блоге</p>
+              <article class="blog-article news__blog-article">
+                <a class="blog-article__link" href="#">
+                  <h3 class="blog-article__title">
+                    10 способов сервировки фруктовых щербетов к столу
+                  </h3>
+                </a>
+              </article>
+            </section>
+
+            <section class="subscribe main__subscribe">
+              <h2 class="visually-hidden">Подписка на рассылку</h2>
+
+              <div class="subscribe__wrapper">
+                <p class="subscribe__text">
+                  Подпишитесь на нашу сладкую рассылку и будьте всегда в курсе
+                  всего самого вкусного, что у нас происходит. Обещаем не
+                  спамить и не слать всякой ненужной ерунды. Честно =)
+                </p>
+
+                <form
+                  class="subscribe-form subscribe__form"
+                  action="https://echo.htmlacademy.ru/"
+                  method="get"
+                  name="form-subscribe"
+                >
+                  <input
+                    class="field subscribe-form__field"
+                    type="text"
+                    name="field-email"
+                  />
+                  <button class="button subscribe-form__button" type="submit">
+                    Отправить
+                  </button>
+                </form>
+              </div>
+            </section>
+          </div>
+
+          <section class="contacts main__contacts">
+            <h2 class="visually-hidden">Контакты</h2>
+
+            <div class="contacts__map"></div>
+
+            <div class="contacts__wrapper">
+              <dl class="contacts__info">
+                <dt class="contacts__title">
+                  Адрес главного офиса и офлайн-магазина:
+                </dt>
+                <dd class="contacts__text">
+                  ул. Большая Конюшенная, 19/8, Санкт-Петербург
+                </dd>
+
+                <dt class="contacts__title">Для заказов по телефону:</dt>
+                <dd class="contacts__text">
+                  <a href=":tel88124502525">8 812 450-25-25</a>
+                  <span>(с 10 до 20 ежедневно)</span>
+                </dd>
+              </dl>
+
+              <button class="button contacts__button" type="button">
+                Форма обратной связи
+              </button>
             </div>
           </section>
         </div>
-
-        <section class="contacts main__contacts">
-          <h2 class="visually-hidden">Контакты</h2>
-
-          <div class="contacts__map"><!-- Здесь будет карта --></div>
-
-          <div class="contacts__wrapper">
-            <dl class="contacts__info">
-              <dt class="contacts__title">
-                Адрес главного офиса и офлайн-магазина:
-              </dt>
-              <dd class="contacts__text">
-                ул. Большая Конюшенная, 19/8, Санкт-Петербург
-              </dd>
-
-              <dt class="contacts__title">Для заказов по телефону:</dt>
-              <dd class="contacts__text">
-                8 812 450-25-25
-                <span>(с 10 до 20 ежедневно)</span>
-              </dd>
-            </dl>
-
-            <button class="button contacts__button" type="button">
-              Форма обратной связи
-            </button>
-          </div>
-        </section>
       </main>
 
       <footer class="footer page__footer">
