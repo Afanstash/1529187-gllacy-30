@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <title>HTML Academy: Глейси</title>
+    <link rel="stylesheet" href="./css/normalize.css" />
     <link rel="stylesheet" href="./css/style.css" />
     <link rel="manifest" href="./site.webmanifest" />
     <link
@@ -39,7 +40,7 @@
         <nav class="header__main-navigation">
           <ul class="main-navigation">
             <li class="main-navigation__item">
-              <a class="main-navigation__link" href="#"> Каталог </a>
+              <a class="main-navigation__link" href="#">Каталог</a>
 
               <ul class="inner-list main-navigation__inner-list">
                 <li class="inner-list__item inner-list__item--special">
@@ -65,25 +66,20 @@
             </li>
 
             <li class="main-navigation__item">
-              <a class="main-navigation__link" href="#">
-                Доставка и оплата
-              </a>
+              <a class="main-navigation__link" href="#">Доставка и оплата</a>
             </li>
 
             <li class="main-navigation__item">
-              <a class="main-navigation__link" href="#">
-                О компании
-              </a>
+              <a class="main-navigation__link" href="#">О компании</a>
             </li>
           </ul>
         </nav>
 
         <ul class="user-navigation header__user-navigation">
           <li class="user-navigation__item">
-            <label
+            <a
               class="user-navigation__button user-navigation__button-search"
-              for="form-search"
-              tabindex="0"
+              href="#"
             >
               <svg
                 class="user-navigation__icon-search"
@@ -94,7 +90,7 @@
                 <use xlink:href="#search"></use>
               </svg>
               <span class="visually-hidden">Поиск</span>
-            </label>
+            </a>
 
             <form
               class="header__form search-form user-navigation__search-form"
@@ -152,14 +148,10 @@
 
               <ul class="sign-form__help-list">
                 <li>
-                  <a class="sign-form__link" href="#">
-                    Забыли пароль?
-                  </a>
+                  <a class="sign-form__link" href="#"> Забыли пароль? </a>
                 </li>
                 <li>
-                  <a class="sign-form__link" href="#">
-                    Новая регистрация
-                  </a>
+                  <a class="sign-form__link" href="#"> Новая регистрация </a>
                 </li>
               </ul>
             </form>
@@ -616,9 +608,7 @@
               <a class="extra__link" href="#"> Наши документы </a>
             </li>
             <li class="extra__item">
-              <a class="extra__link" href="#">
-                Экологические стандарты
-              </a>
+              <a class="extra__link" href="#"> Экологические стандарты </a>
             </li>
           </ul>
         </section>
