@@ -3,48 +3,35 @@
   <head>
     <meta charset="utf-8" />
     <title>HTML Academy: Глейси</title>
-    <link rel="stylesheet" href="./css/normalize.css" />
-    <link rel="stylesheet" href="./css/style.css" />
-    <link rel="manifest" href="./site.webmanifest" />
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="./img/favicons/apple-touch-icon.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="./img/favicons/favicon-32x32.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="./img/favicons/favicon-16x16.png"
-    />
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="manifest" href="./site.webmanifest">
+    <link rel="apple-touch-icon" sizes="180x180" href="./img/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./img/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./img/favicons/favicon-16x16.png">
   </head>
 
-  <body class="page__body">
-    <div class="page__container">
+  <body class="body body_green">
+    <div class="container">
       <header class="header page__header page__wrapper">
         <a class="header__logo">
           <img
             src="./img/content/logo.svg"
             alt="Логотип магазина `Глэйси`"
             width="154"
-            height="64"
-          />
+            height="64">
         </a>
 
-        <nav class="header__main-navigation">
+        <nav>
           <ul class="main-navigation">
             <li class="main-navigation__item">
-              <a class="main-navigation__link" href="#">Каталог</a>
+              <a class="main-navigation__link" href="./blank.html">
+                Каталог
+              </a>
 
               <ul class="inner-list main-navigation__inner-list">
-                <li class="inner-list__item inner-list__item--special">
-                  <a class="inner-list__link" href="#">Новинки</a>
+                <li class="inner-list__item inner-list__item_special">
+                  <a class="inner-list__link" href="./blank.html">Новинки</a>
                 </li>
 
                 <li class="inner-list__item">
@@ -52,25 +39,29 @@
                 </li>
 
                 <li class="inner-list__item">
-                  <a class="inner-list__link" href="#">Щербеты</a>
+                  <a class="inner-list__link" href="./blank.html">Щербеты</a>
                 </li>
 
                 <li class="inner-list__item">
-                  <a class="inner-list__link" href="#">Фруктовый лед</a>
+                  <a class="inner-list__link" href="./blank.html">Фруктовый лед</a>
                 </li>
 
                 <li class="inner-list__item">
-                  <a class="inner-list__link" href="#">Мелорин</a>
+                  <a class="inner-list__link" href="./blank.html">Мелорин</a>
                 </li>
               </ul>
             </li>
 
             <li class="main-navigation__item">
-              <a class="main-navigation__link" href="#">Доставка и оплата</a>
+              <a class="main-navigation__link" href="./blank.html">
+                Доставка и оплата
+              </a>
             </li>
 
             <li class="main-navigation__item">
-              <a class="main-navigation__link" href="#">О компании</a>
+              <a class="main-navigation__link" href="./blank.html">
+                О компании
+              </a>
             </li>
           </ul>
         </nav>
@@ -78,8 +69,8 @@
         <ul class="user-navigation header__user-navigation">
           <li class="user-navigation__item">
             <a
-              class="user-navigation__button user-navigation__button-search"
-              href="#"
+              class="user-navigation__button user-navigation__button_search"
+              href="./blank.html"
             >
               <svg
                 class="user-navigation__icon-search"
@@ -109,8 +100,8 @@
 
           <li class="user-navigation__item">
             <a
-              class="user-navigation__button user-navigation__button-sign"
-              href="#"
+              class="user-navigation__button user-navigation__button_sign"
+              href="./blank.html"
             >
               <svg
                 class="user-navigation__icon-sign"
@@ -148,10 +139,14 @@
 
               <ul class="help-list sign-form__help-list">
                 <li class="help-list__item">
-                  <a class="sign-form__link" href="#"> Забыли пароль? </a>
+                  <a class="help-list__link" href="./blank.html">
+                    Забыли пароль?
+                  </a>
                 </li>
                 <li class="help-list__item">
-                  <a class="sign-form__link" href="#"> Новая регистрация </a>
+                  <a class="help-list__link" href="./blank.html">
+                    Новая регистрация
+                  </a>
                 </li>
               </ul>
             </form>
@@ -159,8 +154,8 @@
 
           <li class="user-navigation__item">
             <a
-              class="user-navigation__button user-navigation__button-cart"
-              href="#"
+              class="user-navigation__button user-navigation__button_cart"
+              href="./blank.html"
             >
               <svg
                 class="user-navigation__icon-cart"
@@ -171,6 +166,7 @@
                 <use xlink:href="#cart"></use>
               </svg>
               <span class="visually-hidden">Корзина</span>
+              <span id="cart-status">Пусто</span>
             </a>
           </li>
         </ul>
@@ -190,7 +186,7 @@
           <div class="carousel__switches">
             <button class="carousel__switch" type="button">
               <svg
-                class="switch switch--active"
+                class="switch switch_current"
                 width="21"
                 height="21"
                 fill="white"
@@ -226,7 +222,7 @@
           </div>
 
           <ul class="carousel__slide-list">
-            <li class="slide carousel__slide slide-1">
+            <li class="slide carousel__slide slide_current">
               <div class="slide__pic-box">
                 <img
                   class="slide__pic"
@@ -247,7 +243,7 @@
               </div>
             </li>
 
-            <li class="slide carousel__slide slide-2">
+            <li class="slide carousel__slide">
               <div class="slide__pic-box">
                 <img
                   class="slide__pic"
@@ -268,7 +264,7 @@
               </div>
             </li>
 
-            <li class="slide carousel__slide slide-3">
+            <li class="slide carousel__slide">
               <div class="slide__pic-box">
                 <img
                   class="slide__pic"
@@ -299,7 +295,7 @@
               <li class="sales__item sales__raspberry">
                 <h3 class="sales__title">Малинка даром!</h3>
                 <p class="sales__text">
-                  При покупке 2 кг любого фруктового мороженного, добавим в ваш
+                  При покупке 2 кг любого фруктового мороженого, добавим в ваш
                   заказ банку малинового варенья бесплатно.
                 </p>
                 <button class="button sales__button" type="button">
@@ -336,7 +332,7 @@
                 <div class="product-card__wrapper">
                   <p class="product-card__price">310 ₽<span>/кг</span></p>
                   <h3 class="product-card__name">
-                    <a class="product-card__link" href="#">
+                    <a class="product-card__link" href="./blank.html">
                       Сливочное с апельсиновым джемом и цитрусовой стружкой
                     </a>
                   </h3>
@@ -357,7 +353,7 @@
                 <div class="product-card__wrapper">
                   <p class="product-card__price">380 ₽<span>/кг</span></p>
                   <h3 class="product-card__name">
-                    <a class="product-card__link" href="#">
+                    <a class="product-card__link" href="./blank.html">
                       Сливочно-кофейное с кусочками шоколада
                     </a>
                   </h3>
@@ -378,7 +374,7 @@
                 <div class="product-card__wrapper">
                   <p class="product-card__price">355 ₽<span>/кг</span></p>
                   <h3 class="product-card__name">
-                    <a class="product-card__link" href="#">
+                    <a class="product-card__link" href="./blank.html">
                       Сливочно-клубничное <br />с присыпкой из белого шоколада
                     </a>
                   </h3>
@@ -399,7 +395,7 @@
                 <div class="product-card__wrapper">
                   <p class="product-card__price">415 ₽<span>/кг</span></p>
                   <h3 class="product-card__name">
-                    <a class="product-card__link" href="#">
+                    <a class="product-card__link" href="./blank.html">
                       Сливочное крем-брюле <br />с карамельной подливкой
                     </a>
                   </h3>
@@ -452,7 +448,7 @@
 
               <p class="news__title">Новое в нашем блоге</p>
               <article class="blog-article news__blog-article">
-                <a class="blog-article__link" href="#">
+                <a class="blog-article__link" href="./blank.html">
                   <h3 class="blog-article__title">
                     10 способов сервировки фруктовых щербетов <br />к столу
                   </h3>
@@ -480,6 +476,7 @@
                     class="input-field subscribe-form__field"
                     type="text"
                     name="field-email"
+                    placeholder="email@example.com"
                   />
                   <button class="button subscribe-form__button" type="submit">
                     Отправить
@@ -495,8 +492,7 @@
 
           <div class="contacts__map"></div>
 
-          <div class="page__wrapper">
-            <div class="contacts__wrapper">
+            <div class="page__wrapper contacts__wrapper">
               <div class="contacts__box">
                 <dl class="contacts__info">
                   <dt class="contacts__title">
@@ -508,7 +504,7 @@
 
                   <dt class="contacts__title">Для заказов по телефону:</dt>
                   <dd class="contacts__text">
-                    <a href=":tel88124502525">8 812 450-25-25</a>
+                    <a class="contacts__link" href=":tel88124502525">8 812 450-25-25</a>
                     <span>(с 10 до 20 ежедневно)</span>
                   </dd>
                 </dl>
@@ -518,7 +514,6 @@
                 </button>
               </div>
             </div>
-          </div>
         </section>
       </main>
 
@@ -528,7 +523,7 @@
 
           <ul class="socials__items">
             <li class="socials__item">
-              <a class="socials__link" href="#">
+              <a class="socials__link" href="./blank.html">
                 <svg
                   width="32"
                   height="32"
@@ -542,7 +537,7 @@
             </li>
 
             <li class="socials__item">
-              <a class="socials__link" href="#">
+              <a class="socials__link" href="./blank.html">
                 <svg
                   width="32"
                   height="32"
@@ -556,7 +551,7 @@
             </li>
 
             <li class="socials__item">
-              <a class="socials__link" href="#">
+              <a class="socials__link" href="./blank.html">
                 <svg
                   width="32"
                   height="32"
@@ -570,7 +565,7 @@
             </li>
 
             <li class="socials__item">
-              <a class="socials__link" href="#">
+              <a class="socials__link" href="./blank.html">
                 <svg
                   width="32"
                   height="32"
@@ -590,7 +585,7 @@
 
           <ul class="extra__items">
             <li class="extra__item extra__item--special">
-              <a class="extra__link" href="#">
+              <a class="extra__link" href="./blank.html">
                 <svg
                   class="extra__item-icon"
                   width="15"
@@ -603,13 +598,13 @@
               </a>
             </li>
             <li class="extra__item">
-              <a class="extra__link" href="#"> Наши документы </a>
+              <a class="extra__link" href="./blank.html"> Наши документы </a>
             </li>
             <li class="extra__item">
-              <a class="extra__link" href="#"> О производстве </a>
+              <a class="extra__link" href="./blank.html"> О производстве </a>
             </li>
             <li class="extra__item">
-              <a class="extra__link" href="#"> Экологические стандарты </a>
+              <a class="extra__link" href="./blank.html"> Экологические стандарты </a>
             </li>
           </ul>
         </section>
