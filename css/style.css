@@ -183,17 +183,17 @@
 
 .body_green {
   background-color: var(--page-bg-green);
-  background-image: url(../img/content/index-promo/promo1-bg.png);
+  background-image: url(../img/design/index-bg/promo1-bg.png);
 }
 
 .body_grey {
   background-color: var(--page-bg-grey);
-  background-image: url(../img/content/index-promo/promo2-bg.png);
+  background-image: url(../img/design/index-bg/promo2-bg.png);
 }
 
 .body_brown {
   background-color: var(--page-bg-brown);
-  background-image: url(../img/content/index-promo/promo3-bg.png);
+  background-image: url(../img/design/index-bg/promo3-bg.png);
 }
 
 .page_catalog .body_green,
@@ -954,11 +954,11 @@
 }
 
 .sales_raspberry {
-  background-image: url(../img/design/index/raspberry-bg.jpg);
+  background-image: url(../img/design/index/sales/raspberry-bg.jpg);
 }
 
 .sales_choco {
-  background-image: url(../img/design/index/choco-bg.jpg);
+  background-image: url(../img/design/index/sales/choco-bg.jpg);
 }
 
 .products {
@@ -1115,7 +1115,7 @@
   border-radius: 16px;
   font-weight: 400;
   color: var(--base-black);
-  background-image: url(../img/design/index/waffle-pattern.jpg);
+  background-image: url(../img/design/index/about/waffle-pattern.jpg);
 }
 
 .about__title {
@@ -1158,19 +1158,19 @@
 }
 
 .features__item_tech::before {
-  background-image: url(../img/design/icons/ice-cream.svg);
+  background-image: url(../img/design/icons/features/ice-cream.svg);
 }
 
 .features__item_eco::before {
-  background-image: url(../img/design/icons/leaf.svg);
+  background-image: url(../img/design/icons/features/leaf.svg);
 }
 
 .features__item_wrnt::before {
-  background-image: url(../img/design/icons/cow.svg);
+  background-image: url(../img/design/icons/features/cow.svg);
 }
 
 .features__item_delivery::before {
-  background-image: url(../img/design/icons/thermometer.svg);
+  background-image: url(../img/design/icons/features/thermometer.svg);
 }
 
 .main__wrapper {
@@ -1190,7 +1190,7 @@
   padding-left: 20px;
   color: var(--base-black);
   background-color: var(--base-white);
-  background-image: url(../img/design/index/strawberry-bg.jpg);
+  background-image: url(../img/design/index/news/strawberry-bg.jpg);
   background-repeat: no-repeat;
 }
 
@@ -1225,7 +1225,7 @@
   font-size: 16px;
   line-height: 22px;
   color: var(--extra-black);
-  background-image: url(../img/design/index/mail-bg.png);
+  background-image: url(../img/design/index/subscribe/mail-bg.png);
 }
 
 .subscribe__wrapper {
@@ -1385,7 +1385,7 @@
 
 .filters-form__section-sort:hover::after,
 .filters-form__section-sort:focus-within::after {
-  background-image: url(../img/design/icons/select-arrow-active.svg);
+  background-image: url(../img/design/icons/form-select/select-arrow-active.svg);
 }
 
 .filters-form__section-sort:hover .filters-form__sort,
@@ -1399,7 +1399,7 @@
   width: 11px;
   height: 10px;
   margin-left: 8px;
-  background-image: url(../img/design/icons/select-arrow.svg);
+  background-image: url(../img/design/icons/form-select/select-arrow.svg);
 }
 
 .filters-form__sort {
@@ -1582,7 +1582,7 @@
   width: 20px;
   height: 20px;
   margin-right: 10px;
-  background-image: url(../img/design/icons/checkbox-off.svg);
+  background-image: url(../img/design/icons/checkbox/checkbox-off.svg);
   opacity: 0.8;
 }
 
@@ -1592,7 +1592,7 @@
 
 .filters-form__checkbox-input:checked + .filters-form__checkbox::before {
   width: 24px;
-  background-image: url(../img/design/icons/checkbox-on.svg);
+  background-image: url(../img/design/icons/checkbox/checkbox-on.svg);
 }
 
 .filters-form__checkbox-input:not([disabled])
