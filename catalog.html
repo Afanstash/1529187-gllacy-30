@@ -93,8 +93,7 @@
                 type="text"
                 name="form-search"
                 id="form-search"
-                placeholder="Крем-брюле"
-              />
+                placeholder="Крем-брюле">
             </form>
           </li>
 
@@ -125,13 +124,13 @@
                 type="text"
                 name="sign-email"
                 placeholder="example@email.com"
-              />
+              >
               <input
                 class="input-field sign-form__password"
                 type="password"
                 name="sign-password"
                 placeholder="......"
-              />
+              >
 
               <button class="button sign-form__button" type="submit">
                 Войти
@@ -155,7 +154,7 @@
           <li class="user-navigation__item cart-nonzero">
             <a
               class="user-navigation__button user-navigation__button_cart"
-              href="#"
+              href="./blank.html"
             >
               <svg
                 class="user-navigation__icon-cart"
@@ -180,7 +179,7 @@
                 type="hidden"
                 name="cart-products"
                 value="[{id: 6, quantity: 1.5, price: 200}, {id: 66, quantity: 1.5, price: 300}]"
-              />
+              >
 
               <ul class="product-list">
                 <li class="product-list__card">
@@ -190,7 +189,7 @@
                     alt="Пломбир с апельсиновым джемом"
                     width="33"
                     height="33"
-                  />
+                  >
                   <h3 class="product-list__name">
                     Пломбир с апельсиновым джемом
                   </h3>
@@ -213,7 +212,7 @@
                     alt="Клубничный пломбир с присыпкой из белого шоколада"
                     width="33"
                     height="33"
-                  />
+                  >
                   <h3 class="product-list__name">
                     Клубничный пломбир с присыпкой из белого шоколада
                   </h3>
@@ -284,29 +283,32 @@
 
               <div class="filters-price filters-price__wrapper">
                 <input
-                  class="filters-form__from-price"
-                  type="text"
+                  class="filters-form__price"
+                  type="number"
                   name="filters-price-range-min"
                   id="filters-price-range-min"
-                  placeholder="100 ₽"
-                  readonly
-                />
-                <span>–</span>
+                  placeholder="100"
+                  min="100"
+                  max="250"
+                >
+                <span class="filters-price__rub">₽</span>
+                –
                 <input
-                  class="filters-form__to-price"
-                  type="text"
+                  class="filters-form__price"
+                  type="number"
                   name="filters-price-range-max"
                   id="filters-price-range-max"
-                  placeholder="500 ₽"
-                  readonly
-                />
+                  placeholder="500"
+                  min="250"
+                  max="500"
+                >
+                <span class="filters-price__rub">₽</span>
               </div>
 
               <div class="filters-form__range-slider">
                 <svg
                   class="filters-form__line"
                   viewbox="0 0 176 2"
-                  xmlns="http://www.w3.org/2000/svg"
                 >
                   <line
                     x1="0"
@@ -314,14 +316,12 @@
                     x2="176"
                     y2="0"
                     stroke="#CAD4CC"
-                    stroke-width="20"
-                  />
+                    stroke-width="20">
                 </svg>
 
                 <svg
                   class="filters-form__filled-line"
                   viewbox="0 0 176 2"
-                  xmlns="http://www.w3.org/2000/svg"
                 >
                   <line
                     x1="20"
@@ -329,8 +329,7 @@
                     x2="100"
                     y2="0"
                     stroke="#F8F7F4"
-                    stroke-width="20"
-                  />
+                    stroke-width="20">
                 </svg>
 
                 <label for="range-min">
@@ -340,19 +339,7 @@
                     height="22"
                     viewBox="0 0 20 22"
                   >
-                    <path
-                      opacity=".3"
-                      d="M10 20A10 10 0 010 10v2a10 10 0 0020 0v-2a10 10 0 01-10 10z"
-                      fill="var(--extra-grey)"
-                    />
-                    <path
-                      d="M10 20a10 10 0 100-20 10 10 0 000 20z"
-                      fill="var(--base-white)"
-                    />
-                    <path
-                      d="M10 12a2 2 0 100-4 2 2 0 000 4z"
-                      fill="var(--extra-grey)"
-                    />
+                    <use xlink:href="#slider-pin"></use>
                   </svg>
                 </label>
 
@@ -363,41 +350,10 @@
                     height="22"
                     viewBox="0 0 20 22"
                   >
-                    <path
-                      opacity=".3"
-                      d="M10 20A10 10 0 010 10v2a10 10 0 0020 0v-2a10 10 0 01-10 10z"
-                      fill="var(--extra-grey)"
-                    />
-                    <path
-                      d="M10 20a10 10 0 100-20 10 10 0 000 20z"
-                      fill="var(--base-white)"
-                    />
-                    <path
-                      d="M10 12a2 2 0 100-4 2 2 0 000 4z"
-                      fill="var(--extra-grey)"
-                    />
+                    <use xlink:href="#slider-pin"></use>
                   </svg>
                 </label>
               </div>
-
-              <input
-                class="visually-hidden"
-                type="range"
-                name="filters-price"
-                value="200"
-                min="100"
-                max="500"
-                id="range-min"
-              />
-              <input
-                class="visually-hidden"
-                type="range"
-                name="filters-price"
-                value="400"
-                min="100"
-                max="500"
-                id="range-max"
-              />
             </fieldset>
 
             <fieldset class="filters-form__section filters-form__section-fat">
@@ -408,7 +364,7 @@
                 type="radio"
                 name="filters-fat"
                 id="fat_zero"
-              />
+              >
               <label
                 class="radio filters-form__label filters-form__radio"
                 for="fat_zero"
@@ -429,7 +385,8 @@
                 type="radio"
                 name="filters-fat"
                 id="fat_upto-ten"
-              />
+                checked
+              >
               <label
                 class="radio filters-form__label filters-form__radio"
                 for="fat_upto-ten"
@@ -450,7 +407,7 @@
                 type="radio"
                 name="filters-fat"
                 id="fat_upto-thirty"
-              />
+              >
               <label
                 class="radio filters-form__label filters-form__radio"
                 for="fat_upto-thirty"
@@ -471,8 +428,7 @@
                 type="radio"
                 name="filters-fat"
                 id="fat_over-thirty"
-                checked
-              />
+              >
               <label
                 class="radio filters-form__label filters-form__radio"
                 for="fat_over-thirty"
@@ -498,7 +454,7 @@
                 name="filters-choco"
                 id="fill_choco"
                 checked
-              />
+              >
               <label
                 class="checkbox filters-form__label filters-form__checkbox"
                 for="fill_choco"
@@ -512,7 +468,7 @@
                 name="filters-sugar"
                 id="fill_sugar"
                 checked
-              />
+              >
               <label
                 class="checkbox filters-form__label filters-form__checkbox"
                 for="fill_sugar"
@@ -525,7 +481,7 @@
                 type="checkbox"
                 name="filters-fruity"
                 id="fill_fruity"
-              />
+              >
               <label
                 class="checkbox filters-form__label filters-form__checkbox"
                 for="fill_fruity"
@@ -538,7 +494,7 @@
                 type="checkbox"
                 name="filters-syrop"
                 id="fill_syrop"
-              />
+              >
               <label
                 class="checkbox filters-form__label filters-form__checkbox"
                 for="fill_syrop"
@@ -551,7 +507,7 @@
                 type="checkbox"
                 name="filters-jam"
                 id="fill_jam"
-              />
+              >
               <label
                 class="checkbox filters-form__label filters-form__checkbox"
                 for="fill_jam"
@@ -566,22 +522,22 @@
           </form>
         </section>
 
-        <section class="products main__products">
+        <section class="products">
           <h2 class="visually-hidden">Каталог</h2>
 
           <ul class="products__items">
-            <li class="product-card products__item">
+            <li class="product-card">
               <img
                 class="product-card__pic"
                 src="./img/content/product/orange_jam.jpg"
-                alt="Картинка мороженное сливочное с апельсиновым джемом и цитрусовой стружкой"
+                alt="Мороженое сливочное с апельсиновым джемом и цитрусовой стружкой"
                 width="267"
                 height="267"
-              />
+              >
               <div class="product-card__wrapper">
                 <p class="product-card__price">310 ₽<span>/кг</span></p>
                 <h3 class="product-card__name">
-                  <a class="link product-card__link" href="#">
+                  <a class="product-card__link" href="./blank.html">
                     Сливочное с апельсиновым джемом и цитрусовой стружкой
                   </a>
                 </h3>
@@ -591,18 +547,18 @@
               </div>
             </li>
 
-            <li class="product-card products__item">
+            <li class="product-card">
               <img
                 class="product-card__pic"
                 src="./img/content/product/choco_coffee.jpg"
-                alt="Картинка мороженное сливочно-кофейное с кусочками шоколада"
+                alt="Мороженое сливочно-кофейное с кусочками шоколада"
                 width="267"
                 height="267"
-              />
+              >
               <div class="product-card__wrapper">
                 <p class="product-card__price">380 ₽<span>/кг</span></p>
                 <h3 class="product-card__name">
-                  <a class="link product-card__link" href="#">
+                  <a class="product-card__link" href="./blank.html">
                     Сливочно-кофейное с кусочками шоколада
                   </a>
                 </h3>
@@ -612,18 +568,18 @@
               </div>
             </li>
 
-            <li class="product-card products__item">
+            <li class="product-card">
               <img
                 class="product-card__pic"
                 src="./img/content/product/strawberry_white_choco.jpg"
-                alt="Картинка мороженное сливочно-клубничное с присыпкой из белого шоколада"
+                alt="Мороженое сливочно-клубничное с присыпкой из белого шоколада"
                 width="267"
                 height="267"
-              />
+              >
               <div class="product-card__wrapper">
                 <p class="product-card__price">355 ₽<span>/кг</span></p>
                 <h3 class="product-card__name">
-                  <a class="link product-card__link" href="#">
+                  <a class="product-card__link" href="./blank.html">
                     Сливочно-клубничное с присыпкой из белого шоколада
                   </a>
                 </h3>
@@ -633,18 +589,18 @@
               </div>
             </li>
 
-            <li class="product-card products__item">
+            <li class="product-card">
               <img
                 class="product-card__pic"
                 src="./img/content/product/cremebrulee.jpg"
-                alt="Картинка мороженное сливочное крем-брюле с карамельной подливкой "
+                alt="Мороженое сливочное крем-брюле с карамельной подливкой "
                 width="267"
                 height="267"
-              />
+              >
               <div class="product-card__wrapper">
                 <p class="product-card__price">415 ₽<span>/кг</span></p>
                 <h3 class="product-card__name">
-                  <a class="link product-card__link" href="#">
+                  <a class="product-card__link" href="./blank.html">
                     Сливочное крем-брюле<br />с карамельной подливкой
                   </a>
                 </h3>
@@ -654,18 +610,18 @@
               </div>
             </li>
 
-            <li class="product-card products__item">
+            <li class="product-card">
               <img
                 class="product-card__pic"
                 src="./img/content/product/lingonberry.jpg"
-                alt="Картинка мороженное сливочное с брусничным джемом"
+                alt="Мороженое сливочное с брусничным джемом"
                 width="267"
                 height="267"
-              />
+              >
               <div class="product-card__wrapper">
                 <p class="product-card__price">325 ₽<span>/кг</span></p>
                 <h3 class="product-card__name">
-                  <a class="link product-card__link" href="#">
+                  <a class="product-card__link" href="./blank.html">
                     Сливочное с брусничным<br />джемом
                   </a>
                 </h3>
@@ -675,18 +631,18 @@
               </div>
             </li>
 
-            <li class="product-card products__item">
+            <li class="product-card">
               <img
                 class="product-card__pic"
                 src="./img/content/product/blueberry.jpg"
-                alt="Картинка мороженное сливочно-черничное с цельными ягодами черники"
+                alt="Мороженое сливочно-черничное с цельными ягодами черники"
                 width="267"
                 height="267"
-              />
+              >
               <div class="product-card__wrapper">
                 <p class="product-card__price">410 ₽<span>/кг</span></p>
                 <h3 class="product-card__name">
-                  <a class="link product-card__link" href="#">
+                  <a class="product-card__link" href="./blank.html">
                     Сливочно-черничное с цельными ягодами черники
                   </a>
                 </h3>
@@ -696,18 +652,18 @@
               </div>
             </li>
 
-            <li class="product-card products__item">
+            <li class="product-card">
               <img
                 class="product-card__pic"
                 src="./img/content/product/lemon_caramel.jpg"
-                alt="Картинка мороженное сливочно-лимонное с карамельной присыпкой"
+                alt="Мороженое сливочно-лимонное с карамельной присыпкой"
                 width="267"
                 height="267"
-              />
+              >
               <div class="product-card__wrapper">
                 <p class="product-card__price">315 ₽<span>/кг</span></p>
                 <h3 class="product-card__name">
-                  <a class="link product-card__link" href="#">
+                  <a class="product-card__link" href="./blank.html">
                     Сливочно-лимонное с карамельной присыпкой
                   </a>
                 </h3>
@@ -717,18 +673,18 @@
               </div>
             </li>
 
-            <li class="product-card products__item">
+            <li class="product-card">
               <img
                 class="product-card__pic"
                 src="./img/content/product/choco_shavings.jpg"
-                alt="Картинка мороженное сливочное с шоколадной стружкой"
+                alt="Мороженое сливочное с шоколадной стружкой"
                 width="267"
                 height="267"
-              />
+              >
               <div class="product-card__wrapper">
                 <p class="product-card__price">320 ₽<span>/кг</span></p>
                 <h3 class="product-card__name">
-                  <a class="link product-card__link" href="#">
+                  <a class="product-card__link" href="./blank.html">
                     Сливочное с шоколадной стружкой
                   </a>
                 </h3>
@@ -738,18 +694,18 @@
               </div>
             </li>
 
-            <li class="product-card products__item">
+            <li class="product-card">
               <img
                 class="product-card__pic"
                 src="./img/content/product/vanille_choco.jpg"
-                alt="Картинка мороженное Сливочно-ванильное с кусочками шоколада"
+                alt="Мороженое Сливочно-ванильное с кусочками шоколада"
                 width="267"
                 height="267"
-              />
+              >
               <div class="product-card__wrapper">
                 <p class="product-card__price">440 ₽<span>/кг</span></p>
                 <h3 class="product-card__name">
-                  <a class="link product-card__link" href="#">
+                  <a class="product-card__link" href="./blank.html">
                     Сливочно-ванильное<br />с кусочками шоколада
                   </a>
                 </h3>
@@ -759,18 +715,18 @@
               </div>
             </li>
 
-            <li class="product-card products__item">
+            <li class="product-card">
               <img
                 class="product-card__pic"
                 src="./img/content/product/mentol.jpg"
-                alt="Картинка мороженное Сливочноe с ментоловым сиропом"
+                alt="Мороженое сливочноe с ментоловым сиропом"
                 width="267"
                 height="267"
-              />
+              >
               <div class="product-card__wrapper">
                 <p class="product-card__price">435 ₽<span>/кг</span></p>
                 <h3 class="product-card__name">
-                  <a class="link product-card__link" href="#">
+                  <a class="product-card__link" href="./blank.html">
                     Сливочноe с ментоловым сиропом
                   </a>
                 </h3>
@@ -780,18 +736,18 @@
               </div>
             </li>
 
-            <li class="product-card products__item">
+            <li class="product-card">
               <img
                 class="product-card__pic"
                 src="./img/content/product/dark_choco.jpg"
-                alt="Картинка мороженное сливочное с кусочками черного шоколада"
+                alt="Мороженое сливочное с кусочками черного шоколада"
                 width="267"
                 height="267"
-              />
+              >
               <div class="product-card__wrapper">
                 <p class="product-card__price">355 ₽<span>/кг</span></p>
                 <h3 class="product-card__name">
-                  <a class="link product-card__link" href="#">
+                  <a class="product-card__link" href="./blank.html">
                     Сливочное с кусочками черного шоколада
                   </a>
                 </h3>
@@ -801,18 +757,18 @@
               </div>
             </li>
 
-            <li class="product-card products__item">
+            <li class="product-card">
               <img
                 class="product-card__pic"
                 src="./img/content/product/mint.jpg"
-                alt="Картинка мороженное сливочное с мятным сиропом"
+                alt="Мороженое сливочное с мятным сиропом"
                 width="267"
                 height="267"
-              />
+              >
               <div class="product-card__wrapper">
                 <p class="product-card__price">420 ₽<span>/кг</span></p>
                 <h3 class="product-card__name">
-                  <a class="link product-card__link" href="#">
+                  <a class="product-card__link" href="./blank.html">
                     Сливочное с мятным сиропом
                   </a>
                 </h3>
@@ -825,15 +781,13 @@
 
           <div class="pagination products__pagination">
             <button
-              class="pagination__button pagination__button--disabled"
+              class="pagination__button pagination__button_disabled"
               type="button"
             >
               <svg
                 width="7"
                 height="12"
                 viewBox="0 0 7 12"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
               >
                 <use xlink:href="#paginations-left"></use>
               </svg>
@@ -845,16 +799,16 @@
                 <a class="pagination__link">1</a>
               </li>
               <li class="pagination__page">
-                <a class="pagination__link" href="#">2</a>
+                <a class="pagination__link" href="./blank.html">2</a>
               </li>
               <li class="pagination__page">
-                <a class="pagination__link" href="#">3</a>
+                <a class="pagination__link" href="./blank.html">3</a>
               </li>
               <li class="pagination__page">
-                <a class="pagination__link" href="#">4</a>
+                <a class="pagination__link" href="./blank.html">4</a>
               </li>
               <li class="pagination__page">
-                <a class="pagination__link" href="#">5</a>
+                <a class="pagination__link" href="./blank.html">5</a>
               </li>
             </ul>
 
@@ -864,8 +818,6 @@
                 width="7"
                 height="12"
                 viewBox="0 0 7 12"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
               >
                 <use xlink:href="#paginations-right"></use>
               </svg>
@@ -1095,6 +1047,21 @@
         <path
           d="M6.84111 5.65875L0.932395 0.148752C0.829699 0.05349 0.690626 0 0.545642 0C0.400659 0 0.261586 0.05349 0.15889 0.148752C0.108543 0.195234 0.0685817 0.250534 0.041311 0.311464C0.0140403 0.372393 0 0.437746 0 0.503752C0 0.569758 0.0140403 0.635111 0.041311 0.69604C0.0685817 0.75697 0.108543 0.812271 0.15889 0.858752L5.6916 5.99875L0.15889 11.1688C0.108543 11.2152 0.0685817 11.2705 0.041311 11.3315C0.0140403 11.3924 0 11.4577 0 11.5238C0 11.5898 0.0140403 11.6551 0.041311 11.716C0.0685817 11.777 0.108543 11.8323 0.15889 11.8788C0.266426 11.9636 0.404942 12.0065 0.545642 11.9988C0.616091 11.9996 0.68594 11.9866 0.750698 11.9608C0.815455 11.935 0.873688 11.8968 0.921651 11.8488L6.84111 6.36875C6.89146 6.32227 6.93142 6.26697 6.95869 6.20604C6.98596 6.14511 7 6.07976 7 6.01375C7 5.94775 6.98596 5.88239 6.95869 5.82146C6.93142 5.76053 6.89146 5.70523 6.84111 5.65875Z"
           fill="white"
+        />
+      </symbol>
+      <symbol id="slider-pin">
+        <path
+          opacity=".3"
+          d="M10 20A10 10 0 010 10v2a10 10 0 0020 0v-2a10 10 0 01-10 10z"
+          fill="var(--extra-grey)"
+        />
+        <path
+          d="M10 20a10 10 0 100-20 10 10 0 000 20z"
+          fill="var(--base-white)"
+        />
+        <path
+          d="M10 12a2 2 0 100-4 2 2 0 000 4z"
+          fill="var(--extra-grey)"
         />
       </symbol>
     </svg>
