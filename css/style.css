@@ -519,10 +519,8 @@
 }
 
 .user-navigation__button_sign {
-  /* min-width: 92px; */
   min-height: 32px;
-  padding-left: 16px;
-  padding-right: 16px;
+  padding: 0 16px;
   border-radius: 20px;
 }
 
@@ -536,47 +534,40 @@
 }
 
 .sign-form {
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
-  gap: 20px 0;
-  width: 277px;
-  height: 214px;
+  flex-wrap: wrap;
+  min-width: 277px;
+  min-height: 214px;
   padding: 19px 17px 22px 20px;
 }
 
 .sign-form:hover,
 .sign-form:focus-within {
-  display: grid;
+  display: flex;
   left: calc(100% - 277px);
 }
 
 .user-navigation__button:hover + .sign-form,
 .user-navigation__button:focus + .sign-form {
-  display: grid;
+  display: flex;
   left: calc(100% - 277px);
 }
 
 .sign-form__email {
-  grid-column: 1 / -1;
-  grid-row: 1 / 2;
+  width: 100%;
+  margin-bottom: 20px;
 }
 
 .sign-form__password {
-  grid-column: 1 / -1;
-  grid-row: 2 / 3;
+  width: 100%;
+  margin-bottom: 20px;
 }
 
 .sign-form__button {
-  grid-column: 1 / 2;
-  grid-row: 3 / 4;
-  width: 103px;
+  min-width: 103px;
   height: 44px;
+  margin-right: 18px;
+  padding: 0 16px;
   border-radius: 26px;
-}
-
-.sign-form__help-list {
-  grid-column: 2 / 3;
-  grid-row: 3 / 4;
 }
 
 .help-list {
@@ -865,9 +856,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 261px;
+  min-width: 261px;
   height: 62px;
   margin: 0 auto 110px;
+  padding: 0 20px;
   border-radius: 70px;
   font-size: 32px;
   line-height: 44px;
@@ -1095,8 +1087,9 @@
   display: none;
   align-items: center;
   justify-content: center;
-  width: 200px;
+  min-width: 200px;
   height: 44px;
+  padding: 0 16px;
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
@@ -1196,8 +1189,7 @@
 }
 
 .news {
-  padding-top: 20px;
-  padding-left: 20px;
+  padding: 20px;
   color: var(--base-black);
   background-color: var(--base-white);
   background-image: url(../img/design/index/news/strawberry-bg.jpg);
@@ -1260,6 +1252,7 @@
 
 .subscribe-form {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
 }
 
@@ -1271,13 +1264,14 @@
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  width: 130px;
+  min-width: 130px;
   height: 44px;
+  padding: 0 19px;
   border-radius: 70px;
 }
 
 .contacts {
-  height: 430px;
+  min-height: 430px;
   margin-top: 40px;
   position: relative;
   color: var(--base-black);
@@ -1286,7 +1280,7 @@
 /* временные стили */
 .contacts__map {
   width: calc(100% + (100vw - 100%) / 2);
-  height: 430px;
+  min-height: 100%;
   position: absolute;
   top: 0px;
   left: calc((100vw - 100%) / -2);
@@ -1297,16 +1291,15 @@
 
 .contacts__wrapper {
   display: flex;
-  height: 430px;
+  min-height: 430px;
   justify-content: flex-end;
   align-items: center;
 }
 
 .contacts__box {
-  width: 303px;
-  height: 306px;
-  padding-top: 30px;
-  padding-left: 25px;
+  min-width: 303px;
+  min-height: 306px;
+  padding: 30px 25px;
   border-radius: 16px;
   background-color: var(--extra-white);
 }
@@ -1349,8 +1342,9 @@
 }
 
 .contacts__button {
-  width: 253px;
+  min-width: 253px;
   height: 43px;
+  padding: 0 28px;
   border-radius: 70px;
 }
 
@@ -1755,23 +1749,22 @@
 }
 
 .extra__items {
-  display: grid;
+  /* display: grid;
   grid-template-columns: max-content max-content;
-  grid-template-rows: 1fr 1fr;
-  width: 304px;
+  grid-template-rows: 1fr 1fr; */
+  display: flex;
+  flex-wrap: wrap;
+  min-width: 304px;
   margin-top: 0;
-  margin-left: 3px;
+  margin-left: 40px;
   margin-bottom: 5px;
   padding-left: 0;
   list-style: none;
 }
 
 .extra__item {
+  min-width: 162px;
   position: relative;
-}
-
-.extra__item:nth-child(2n + 1) {
-  margin-right: 32px;
 }
 
 .extra__item:not(:first-child),
@@ -1779,8 +1772,11 @@
   margin-top: 8px;
 }
 
+.extra__item:nth-child(2n) {
+  margin-left: -20px;
+}
+
 .extra__item_special {
-  position: relative;
   top: -2px;
   font-weight: 700;
 }
@@ -1848,8 +1844,10 @@
 }
 
 .feedback {
+  display: flex;
+  flex-wrap: wrap;
   width: 477px;
-  height: 441px;
+  min-height: 441px;
   border-radius: 6px;
   padding-top: 20px;
   padding-left: 24px;
@@ -1870,6 +1868,7 @@
   display: flex;
   justify-content: space-between;
   align-items: baseline;
+  width: 100%;
 }
 
 .feedback__title {
@@ -1899,8 +1898,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 140px;
+  min-width: 140px;
   height: 44px;
+  padding: 0 24px;
   border-radius: 70px;
   margin-top: auto;
   margin-left: auto;
