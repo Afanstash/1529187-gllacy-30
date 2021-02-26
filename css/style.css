@@ -56,6 +56,7 @@
   --product-card-bg: rgba(0, 0, 0, 0.2);
 
   --transparent-base-white: rgba(255, 255, 255, 0.2);
+  --transparent-base-white-full: rgba(255, 255, 255, 0);
   --transparent-base-black: rgba(50, 50, 50, 0.3);
   --transparent-brightred: rgba(232, 77, 55, 0.3);
   --transparent-darkred: rgba(160, 32, 11, 0.76);
@@ -70,6 +71,8 @@
   --fallback-raspberry: #a21139;
   --fallback-choco: #78513f;
   --fallback-about: #f0e5c9;
+
+  --modal-close-color: #231f20;
 }
 
 *,
@@ -217,8 +220,8 @@
   height: 656px;
   background: linear-gradient(
     180deg,
-    rgba(255, 255, 255, 0.2) 0%,
-    rgba(255, 255, 255, 0) 100%
+    var(--transparent-base-white) 0%,
+    var(--transparent-base-white-full) 100%
   );
   position: absolute;
   top: 0px;
@@ -472,7 +475,8 @@
 }
 
 .user-navigation__button:hover,
-.user-navigation__button:focus {
+.user-navigation__button:focus,
+.user-navigation__item:focus-within .user-navigation__button_search {
   color: var(--base-black);
   background: var(--base-white);
 }
@@ -488,10 +492,10 @@
   fill: var(--base-white);
 }
 
-.user-navigation__button:hover .user-navigation__icon-search,
 .user-navigation__button:hover .user-navigation__icon-sign,
-.user-navigation__button:focus .user-navigation__icon-search,
-.user-navigation__button:focus .user-navigation__icon-sign {
+.user-navigation__button:focus .user-navigation__icon-sign,
+.user-navigation__button:hover .user-navigation__icon-search,
+.user-navigation__item:focus-within .user-navigation__icon-search {
   fill: var(--base-black);
 }
 
@@ -1342,10 +1346,14 @@
 }
 
 .contacts__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   min-width: 253px;
   height: 43px;
   padding: 0 28px;
   border-radius: 70px;
+  text-decoration: none;
 }
 
 .main__filters {
@@ -1720,23 +1728,30 @@
   margin-right: 8px;
 }
 
-.socials__link-icon {
+.socials__icon {
   width: 36px;
   height: 36px;
+  border-radius: 50%;
+}
+
+.socials__icon-stroke {
+  stroke: var(--base-white);
+  stroke-width: 2;
+  stroke-opacity: 0.5;
+}
+
+.socials__icon-fill {
   fill: var(--base-white);
   fill-opacity: 0.8;
-  border-radius: 50%;
-  border: 2px solid var(--transparent-grey);
 }
 
-.socials__link:hover .socials__link-icon,
-.socials__link:focus .socials__link-icon {
-  fill-opacity: 1;
+.socials__icon:active .socials__icon-stroke {
+  stroke-opacity: 0.7;
 }
 
-.socials__link:active .socials__link-icon {
+.socials__icon:hover .socials__icon-fill,
+.socials__icon:focus .socials__icon-fill {
   fill-opacity: 1;
-  border-color: var(--transparent-lightgrey);
 }
 
 .footer__extra {
