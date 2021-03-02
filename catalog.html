@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8" />
     <title>HTML Academy: Глейси</title>
-    <link rel="stylesheet" href="./css/normalize.css">
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/normalize.min.css">
+    <link rel="stylesheet" href="./css/style.min.css">
     <link rel="manifest" href="./site.webmanifest">
     <link rel="apple-touch-icon" sizes="180x180" href="./img/favicons/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="./img/favicons/favicon-32x32.png">
@@ -100,9 +100,9 @@
           </li>
 
           <li class="user-navigation__item">
-            <a
+            <label
               class="user-navigation__button user-navigation__button_sign"
-              href="./blank.html"
+              for="sign-email"
             >
               <svg
                 class="user-navigation__icon-sign"
@@ -114,7 +114,7 @@
                 <use xlink:href="#sign"></use>
               </svg>
               Вход
-            </a>
+            </label>
 
             <form
               class="header__form sign-form user-navigation__sign-form"
@@ -122,7 +122,6 @@
               method="get"
               name="form-sign"
             >
-              <label class="visually-hidden" for="sign-email">Логин</label>
               <input
                 class="input-field sign-form__email"
                 type="email"
@@ -142,7 +141,7 @@
                 Войти
               </button>
 
-              <ul class="help-list sign-form__help-list">
+              <ul class="help-list">
                 <li class="help-list__item">
                   <a class="help-list__link" href="./blank.html">
                     Забыли пароль?
@@ -306,7 +305,7 @@
                   aria-label="Фильтр по цене: введите минимальную цену">
 
                 <span class="filters-price__rub">₽</span>
-                –
+                ⎯
                 <input
                   class="filters-form__price"
                   type="number"
@@ -560,10 +559,10 @@
                     Сливочное с апельсиновым джемом и цитрусовой стружкой
                   </a>
                 </h3>
-                <button class="button product-card__button" type="button">
-                  Быстрый просмотр
-                </button>
               </div>
+              <a class="button product-card__button" href="./blank.html">
+                Быстрый просмотр
+              </a>
             </li>
 
             <li class="product-card">
@@ -581,10 +580,10 @@
                     Сливочно-кофейное с кусочками шоколада
                   </a>
                 </h3>
-                <button class="button product-card__button" type="button">
-                  Быстрый просмотр
-                </button>
               </div>
+              <a class="button product-card__button" href="./blank.html">
+                Быстрый просмотр
+              </a>
             </li>
 
             <li class="product-card">
@@ -602,10 +601,10 @@
                     Сливочно-клубничное с присыпкой из белого шоколада
                   </a>
                 </h3>
-                <button class="button product-card__button" type="button">
-                  Быстрый просмотр
-                </button>
               </div>
+              <a class="button product-card__button" href="./blank.html">
+                Быстрый просмотр
+              </a>
             </li>
 
             <li class="product-card">
@@ -623,10 +622,10 @@
                     Сливочное крем-брюле<br />с карамельной подливкой
                   </a>
                 </h3>
-                <button class="button product-card__button" type="button">
-                  Быстрый просмотр
-                </button>
               </div>
+              <a class="button product-card__button" href="./blank.html">
+                Быстрый просмотр
+              </a>
             </li>
 
             <li class="product-card">
@@ -644,10 +643,10 @@
                     Сливочное с брусничным<br />джемом
                   </a>
                 </h3>
-                <button class="button product-card__button" type="button">
-                  Быстрый просмотр
-                </button>
               </div>
+              <a class="button product-card__button" href="./blank.html">
+                Быстрый просмотр
+              </a>
             </li>
 
             <li class="product-card">
@@ -665,10 +664,10 @@
                     Сливочно-черничное с цельными ягодами черники
                   </a>
                 </h3>
-                <button class="button product-card__button" type="button">
-                  Быстрый просмотр
-                </button>
               </div>
+              <a class="button product-card__button" href="./blank.html">
+                Быстрый просмотр
+              </a>
             </li>
 
             <li class="product-card">
@@ -686,10 +685,10 @@
                     Сливочно-лимонное с карамельной присыпкой
                   </a>
                 </h3>
-                <button class="button product-card__button" type="button">
-                  Быстрый просмотр
-                </button>
               </div>
+              <a class="button product-card__button" href="./blank.html">
+                Быстрый просмотр
+              </a>
             </li>
 
             <li class="product-card">
@@ -707,10 +706,10 @@
                     Сливочное с шоколадной стружкой
                   </a>
                 </h3>
-                <button class="button product-card__button" type="button">
-                  Быстрый просмотр
-                </button>
               </div>
+              <a class="button product-card__button" href="./blank.html">
+                Быстрый просмотр
+              </a>
             </li>
 
             <li class="product-card">
@@ -728,10 +727,10 @@
                     Сливочно-ванильное<br />с кусочками шоколада
                   </a>
                 </h3>
-                <button class="button product-card__button" type="button">
-                  Быстрый просмотр
-                </button>
               </div>
+              <a class="button product-card__button" href="./blank.html">
+                Быстрый просмотр
+              </a>
             </li>
 
             <li class="product-card">
@@ -749,10 +748,10 @@
                     Сливочноe с ментоловым сиропом
                   </a>
                 </h3>
-                <button class="button product-card__button" type="button">
-                  Быстрый просмотр
-                </button>
               </div>
+              <a class="button product-card__button" href="./blank.html">
+                Быстрый просмотр
+              </a>
             </li>
 
             <li class="product-card">
@@ -770,10 +769,10 @@
                     Сливочное с кусочками черного шоколада
                   </a>
                 </h3>
-                <button class="button product-card__button" type="button">
-                  Быстрый просмотр
-                </button>
               </div>
+              <a class="button product-card__button" href="./blank.html">
+                Быстрый просмотр
+              </a>
             </li>
 
             <li class="product-card">
@@ -791,10 +790,10 @@
                     Сливочное с мятным сиропом
                   </a>
                 </h3>
-                <button class="button product-card__button" type="button">
-                  Быстрый просмотр
-                </button>
               </div>
+              <a class="button product-card__button" href="./blank.html">
+                Быстрый просмотр
+              </a>
             </li>
           </ul>
 
@@ -1123,5 +1122,7 @@
         />
       </symbol>
     </svg>
+
+    <script src="./js/index.min.js"></script>
   </body>
 </html>
