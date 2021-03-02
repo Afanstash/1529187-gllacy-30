@@ -127,7 +127,7 @@
               </label>
               <input
                 class="input-field sign-form__email"
-                type="text"
+                type="email"
                 name="sign-email"
                 id="sign-email"
                 placeholder="example@email.com">
@@ -200,10 +200,10 @@
               <span class="visually-hidden">Первый слайд</span>
               <svg
                 class="switch switch_current"
-                width="21"
+                width="22"
                 height="21"
                 fill="white"
-                viewBox="0 0 21 21"
+                viewBox="0 0 22 21"
                 aria-hidden="true"
               >
                 <use xlink:href="#promo-btn"></use>
@@ -214,10 +214,10 @@
               <span class="visually-hidden">Второй слайд</span>
               <svg
                 class="switch"
-                width="21"
+                width="22"
                 height="21"
                 fill="white"
-                viewBox="0 0 21 21"
+                viewBox="0 0 22 21"
                 aria-hidden="true"
               >
                 <use xlink:href="#promo-btn"></use>
@@ -228,10 +228,10 @@
               <span class="visually-hidden">Третий слайд</span>
               <svg
                 class="switch"
-                width="21"
+                width="22"
                 height="21"
                 fill="white"
-                viewBox="0 0 21 21"
+                viewBox="0 0 22 21"
                 aria-hidden="true"
               >
                 <use xlink:href="#promo-btn"></use>
@@ -502,32 +502,34 @@
         <section class="contacts">
           <h2 class="visually-hidden">Контакты</h2>
 
-          <div class="contacts__map"></div>
+          <iframe
+            class="contacts__map"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872533273!2d30.320858716096975!3d59.93871648187614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1614676091813!5m2!1sru!2sru"
+            allowfullscreen=""
+            loading="lazy">
+          </iframe>
 
-            <div class="page__wrapper contacts__wrapper">
-              <div class="contacts__box">
-                <dl class="contacts__info">
-                  <dt class="contacts__title">
-                    Адрес главного офиса <br>и офлайн-магазина:
-                  </dt>
-                  <dd class="contacts__text">
-                    ул. Большая Конюшенная, 19/8, Санкт-Петербург
-                  </dd>
+          <div class="contacts__box">
+            <dl class="contacts__info">
+              <dt class="contacts__title">
+                Адрес главного офиса <br>и офлайн-магазина:
+              </dt>
+              <dd class="contacts__text">
+                ул. Большая Конюшенная, 19/8, Санкт-Петербург
+              </dd>
 
-                  <dt class="contacts__title">
-                    Для заказов по телефону:
-                  </dt>
-                  <dd class="contacts__text">
-                    <a class="contacts__link" href=":tel88124502525">8 812 450-25-25</a>
-                    <span>(с 10 до 20 ежедневно)</span>
-                  </dd>
-                </dl>
-
-                <a class="button contacts__button" href="./writeus.html">
-                  Форма обратной связи
-                </a>
-              </div>
-            </div>
+              <dt class="contacts__title">
+                Для заказов по телефону:
+              </dt>
+              <dd class="contacts__text">
+                <a class="contacts__link" href=":tel88124502525">8 812 450-25-25</a>
+                <span>(с 10 до 20 ежедневно)</span>
+              </dd>
+            </dl>
+            <a class="button contacts__button" href="./writeus.html">
+              Форма обратной связи
+            </a>
+          </div>
         </section>
       </main>
 
@@ -631,18 +633,18 @@
                   fill="none"
                   aria-hidden="true"
                 >
-                <path class="socials__icon-stroke"
-                  d="M35 18c0 9.389-7.611 17-17 17S1 27.389 1 18 8.611
-                  1 18 1s17 7.611 17 17z"/>
-                <path class="socials__icon-fill"
-                  d="M18 2a16 16 0 100 32 16 16 0 000-32zm7.94 12.81c-.25
-                  6.52-3.46 10.83-11 10.7h-.48c-.45 0-4.55-.44-5.35-1.82a7.32
-                  7.32 0 005.12-1.14c-1.05-.29-2.92-.46-3.25-2.85a2.31 2.31 0
-                  001.3.12C11 19 9.53 18.3 9.61 16.17c.418.32.934.482
-                  1.46.46-.77-.23-2.15-3.24-1-4.78 2 1.79 4.07 3.48 7.8
-                  3.64.23-2.21 1.24-3.7 3.17-4.32A3.61 3.61 0 0125
-                  12.31c.74-.23 1.45-.47 2.19-.69a2.21 2.21 0 01-.93 1.71
-                  1.77 1.77 0 001.42-.47 2.9 2.9 0 01-1.74 1.95z"/>
+                  <path class="socials__icon-stroke"
+                    d="M35 18c0 9.389-7.611 17-17 17S1 27.389 1 18 8.611
+                    1 18 1s17 7.611 17 17z"/>
+                  <path class="socials__icon-fill"
+                    d="M18 2a16 16 0 100 32 16 16 0 000-32zm7.94 12.81c-.25
+                    6.52-3.46 10.83-11 10.7h-.48c-.45 0-4.55-.44-5.35-1.82a7.32
+                    7.32 0 005.12-1.14c-1.05-.29-2.92-.46-3.25-2.85a2.31 2.31 0
+                    001.3.12C11 19 9.53 18.3 9.61 16.17c.418.32.934.482
+                    1.46.46-.77-.23-2.15-3.24-1-4.78 2 1.79 4.07 3.48 7.8
+                    3.64.23-2.21 1.24-3.7 3.17-4.32A3.61 3.61 0 0125
+                    12.31c.74-.23 1.45-.47 2.19-.69a2.21 2.21 0 01-.93 1.71
+                    1.77 1.77 0 001.42-.47 2.9 2.9 0 01-1.74 1.95z"/>
                 </svg>
                 <span class="visually-hidden">Twitter</span>
               </a>
@@ -747,7 +749,7 @@
           <label class="visually-hidden" for="feedback-email">Электронная почта</label>
           <input
             class="input-field feedback-form__field"
-            type="text"
+            type="email"
             name="feedback-email"
             id="feedback-email"
             placeholder="example@email.com">
