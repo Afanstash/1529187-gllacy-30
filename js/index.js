@@ -17,7 +17,7 @@ const feedbackEmail = feedbackForm.querySelector("#feedback-email");
 const feedbackReview = feedbackForm.querySelector("#feedback-review");
 
 const signForm = document.querySelector(".sign-form");
-const signLogin = signForm.querySelector("#sign-email");
+const signEmail = signForm.querySelector("#sign-email");
 const signPassword = signForm.querySelector("#sign-password");
 
 const carouselSwitches = document.querySelectorAll(".switch");
@@ -62,6 +62,9 @@ const closeOverlay = () => {
 const onContactsBtnClick = (evt) => {
   evt.preventDefault();
   showOverlay();
+  if (storageLogin) {
+    feedbackEmail.value = storageLogin;
+  }
   feedbackName.focus();
 };
 
@@ -84,28 +87,19 @@ const onFeedbackFormSubmit = (evt) => {
     feedbackBody.classList.remove("feedback_err");
     feedbackBody.offsetWidth = feedbackBody.offsetWidth;
     feedbackBody.classList.add("feedback_err");
-  }
-};
-
-const onSignFormSubmit = (evt) => {
-  if (!signLogin.value || !signPassword.value) {
-    evt.preventDefault();
   } else {
     if (isLocalStorage) {
-      localStorage.setItem("login", signLogin.value);
+      localStorage.setItem("login", feedbackEmail.value);
     }
   }
 };
 
-const onSignLoginFocus = () => {
-  evt.preventDefault();
+const onSignFormFocus = (evt) => {
   if (storageLogin) {
-    signLogin.value = storageLogin;
-    signPassword.focus();
+    signEmail.value = storageLogin;
   }
 };
 
 contactsButton.addEventListener("click", onContactsBtnClick);
 feedbackForm.addEventListener("submit", onFeedbackFormSubmit);
-signForm.addEventListener("submit", onSignFormSubmit);
-signLogin.addEventListener("focus", onSignLoginFocus);
+signForm.addEventListener("focusin", onSignFormFocus);

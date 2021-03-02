@@ -516,7 +516,8 @@
 
 .user-navigation__button:hover,
 .user-navigation__button:focus,
-.user-navigation__item:focus-within .user-navigation__button_search {
+.user-navigation__item:focus-within .user-navigation__button_search,
+.user-navigation__item:focus-within .user-navigation__button_sign {
   color: var(--base-black);
   background: var(--base-white);
 }
@@ -533,7 +534,7 @@
 }
 
 .user-navigation__button:hover .user-navigation__icon-sign,
-.user-navigation__button:focus .user-navigation__icon-sign,
+.user-navigation__item:focus-within .user-navigation__icon-sign,
 .user-navigation__button:hover .user-navigation__icon-search,
 .user-navigation__item:focus-within .user-navigation__icon-search {
   fill: var(--base-black);
@@ -1325,7 +1326,7 @@
   width: 100%;
   min-height: 430px;
   border: 0;
-  background-color: greenyellow;
+  background-image: url(../img/content/map.png);
 }
 
 .contacts__box {
@@ -1401,6 +1402,7 @@
   min-height: 36px;
   position: relative;
   margin-right: 12px;
+  margin-bottom: 38px;
   border: none;
   border-radius: 20px;
   background-color: var(--transparent-base-white);
@@ -1590,7 +1592,7 @@
   display: flex;
   align-items: center;
   width: 711px;
-  margin-top: 38px;
+  margin-bottom: 0;
   padding: 0 14px 0 14px;
 }
 

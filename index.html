@@ -100,9 +100,9 @@
           </li>
 
           <li class="user-navigation__item">
-            <a
+            <label
               class="user-navigation__button user-navigation__button_sign"
-              href="./blank.html"
+              for="sign-email"
             >
               <svg
                 class="user-navigation__icon-sign"
@@ -114,7 +114,7 @@
                 <use xlink:href="#sign"></use>
               </svg>
               Вход
-            </a>
+            </label>
 
             <form
               class="header__form sign-form user-navigation__sign-form"
@@ -122,9 +122,6 @@
               method="get"
               name="form-sign"
             >
-              <label class="visually-hidden" for="sign-email">
-                Логин
-              </label>
               <input
                 class="input-field sign-form__email"
                 type="email"
@@ -132,9 +129,7 @@
                 id="sign-email"
                 placeholder="example@email.com">
 
-              <label class="visually-hidden" for="sign-password">
-                Пароль
-              </label>
+              <label class="visually-hidden" for="sign-password">Пароль</label>
               <input
                 class="input-field sign-form__password"
                 type="password"
@@ -162,10 +157,7 @@
           </li>
 
           <li class="user-navigation__item">
-            <a
-              class="user-navigation__button user-navigation__button_cart"
-              href="./blank.html"
-            >
+            <a class="user-navigation__button user-navigation__button_cart">
               <svg
                 class="user-navigation__icon-cart"
                 width="21"
@@ -506,7 +498,11 @@
             class="contacts__map"
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872533273!2d30.320858716096975!3d59.93871648187614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1614676091813!5m2!1sru!2sru"
             allowfullscreen=""
-            loading="lazy">
+            loading="lazy"
+          >
+            <a href="https://www.google.com/maps/place/Большая+Конюшенная+ул.,+19%2F8,+Санкт-Петербург,+191186/@59.9387165,30.3208587,17z/data=!4m13!1m7!3m6!1s0x4696310fca145cc1:0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!3b1!8m2!3d59.9387165!4d30.3230474!3m4!1s0x4696310fca145cc1:0x42b32648d8238007!8m2!3d59.9387165!4d30.3230474">
+              <img src="./img/content/map.png" width="1200" height="430">
+            </a>
           </iframe>
 
           <div class="contacts__box">
@@ -759,6 +755,7 @@
             class="input-field feedback-form__review"
             cols="30"
             rows="10"
+            name="feedback-review"
             id="feedback-review"
             placeholder="В свободной форме"
           ></textarea>
