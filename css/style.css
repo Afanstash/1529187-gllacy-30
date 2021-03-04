@@ -960,9 +960,9 @@
 }
 
 .sales__items {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 26px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
   margin-top: 0;
   margin-bottom: 0;
   padding-left: 0;
@@ -1185,8 +1185,8 @@
 }
 
 .features {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: min-content min-content;
   margin-top: 0;
   margin-bottom: 0;
   padding-left: 0;
@@ -1194,7 +1194,7 @@
 }
 
 .features__item {
-  max-width: 535px;
+  width: 535px;
   margin-bottom: 23px;
   padding-left: 55px;
   position: relative;
