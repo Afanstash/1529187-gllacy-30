@@ -1812,12 +1812,11 @@
 }
 
 .extra__items {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: auto auto;
   min-width: 304px;
   margin-top: 0;
-  margin-left: 40px;
-  margin-bottom: 5px;
+  margin-bottom: 14px;
   padding-left: 0;
   list-style: none;
 }
@@ -1833,7 +1832,7 @@
 }
 
 .extra__item:nth-child(2n) {
-  margin-left: -20px;
+  margin-left: -18px;
 }
 
 .extra__item_special {
@@ -1843,7 +1842,7 @@
 
 .extra__item-icon {
   position: absolute;
-  top: 50%;
+  top: 55%;
   transform: translateY(-50%);
   left: calc(-15px - 7px); /* Размер иконки - отступ */
 }
