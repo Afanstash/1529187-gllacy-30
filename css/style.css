@@ -1529,8 +1529,15 @@
 }
 
 .filters-form__pin {
+  width: 20px;
+  height: 22px;
   position: absolute;
   top: 19px;
+}
+
+.filters-form__pin:hover {
+  width: 22px;
+  height: 25px;
 }
 
 .filters-form__pin-min {
