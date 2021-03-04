@@ -247,7 +247,7 @@
 
 .container {
   display: grid;
-  grid-template-rows: auto min-content;
+  grid-template-rows: min-content min-content;
   align-items: start;
   width: 100%;
   min-height: 100%;
@@ -856,7 +856,7 @@
 
 .carousel {
   position: relative;
-  margin-bottom: -69px;
+  margin-bottom: -72px;
   z-index: -1;
 }
 
@@ -873,28 +873,26 @@
 .slide {
   display: none;
   min-width: calc(1200px - (27px * 2));
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr;
+  position: relative;
+  text-align: center;
 }
 
 .slide_current {
-  display: grid;
+  display: block;
 }
 
 .slide__pic {
-  grid-column: 1 / -1;
-  grid-row: 1 / -1;
   width: 716px;
   height: 716px;
-  margin: 0 auto;
 }
 
 .slide__wrapper {
-  grid-column: 1 / -1;
-  grid-row: 1 / -1;
-  align-self: end;
   display: flex;
   flex-direction: column;
+  position: absolute;
+  bottom: 3px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .slide__title {
@@ -926,6 +924,7 @@
 .carousel__switches {
   position: absolute;
   bottom: 129px;
+  z-index: 100;
 }
 
 .carousel__switch {
