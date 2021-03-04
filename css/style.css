@@ -1534,11 +1534,11 @@
 }
 
 .filters-form__pin-min {
-  transform: translate(20px, -50%);
+  transform: translate(12px, -50%);
 }
 
 .filters-form__pin-max {
-  transform: translate(100px, -50%);
+  transform: translate(110px, -50%);
 }
 
 .filters-form__pin {
