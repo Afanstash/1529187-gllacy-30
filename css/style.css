@@ -844,7 +844,7 @@
 .main__title {
   display: flex;
   margin-top: 0;
-  margin-bottom: 57px;
+  margin-bottom: 58px;
   font-size: 35px;
   line-height: 27px;
 }
@@ -1406,16 +1406,17 @@
 }
 
 .filters-form {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  width: 869px;
 }
 
 .filters-form__section {
-  min-height: 36px;
+  height: 36px;
   position: relative;
   margin-right: 12px;
   margin-bottom: 38px;
-  padding-top: 7px;
+  padding-top: 10px;
   border: none;
   border-radius: 20px;
   background-color: var(--transparent-base-white);
@@ -1437,8 +1438,7 @@
 .filters-form__section-sort {
   display: flex;
   align-items: center;
-  min-width: 196px;
-  min-height: 100%;
+  width: 196px;
   padding: 0 16px;
   position: relative;
 }
@@ -1546,9 +1546,9 @@
 }
 
 .filters-form__section-fat {
+  grid-column: 3 / 5;
   display: flex;
   min-width: 425px;
-  min-height: 100%;
   align-items: center;
   padding-left: 14px;
 }
@@ -1602,11 +1602,12 @@
 }
 
 .filters-form__section-fill {
+  grid-column: 1 / 4;
   display: flex;
   align-items: center;
   width: 711px;
   margin-bottom: 0;
-  padding: 0 14px 0 14px;
+  padding: 4px 14px 0 14px;
 }
 
 .filters-form__section-fill .filters-form__title {
@@ -1671,9 +1672,9 @@
 }
 
 .filters-form__button {
-  align-self: flex-end;
-  min-width: 144px;
-  min-height: 36px;
+  justify-self: end;
+  width: 144px;
+  height: 36px;
   border: 2px solid var(--base-white);
   border-radius: 20px;
   font-family: "Roboto", "Arial", sans-serif;
@@ -1686,8 +1687,8 @@
 
 .filters-form__button:hover,
 .filters-form__button:focus {
-  color: var(--base-black);
   border: none;
+  color: var(--base-black);
   background-color: var(--base-white);
 }
 
