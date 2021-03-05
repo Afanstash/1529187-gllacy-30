@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>HTML Academy: Глейси</title>
     <link rel="stylesheet" href="./css/normalize.min.css">
-    <link rel="stylesheet" href="./css/style.min.css">
+    <link rel="stylesheet" href="./css/style.css">
     <link rel="manifest" href="./site.webmanifest">
     <link rel="apple-touch-icon" sizes="180x180" href="./img/favicons/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="./img/favicons/favicon-32x32.png">
@@ -69,10 +69,7 @@
 
         <ul class="user-navigation header__user-navigation">
           <li class="user-navigation__item">
-            <label
-              class="user-navigation__button user-navigation__button_search"
-              for="form-search"
-            >
+            <div class="user-navigation__button user-navigation__button_search">
               <svg
                 class="user-navigation__icon-search"
                 width="16"
@@ -83,13 +80,14 @@
                 <use xlink:href="#search"></use>
               </svg>
               <span class="visually-hidden">Поиск по сайту</span>
-            </label>
+            </div>
 
             <form
               class="header__form search-form user-navigation__search-form"
               action="https://echo.htmlacademy.ru/"
               method="get"
             >
+              <label class="visually-hidden" for="form-search">Поле поиска</label>
               <input
                 class="input-field search-form__field"
                 type="text"
@@ -100,10 +98,7 @@
           </li>
 
           <li class="user-navigation__item">
-            <label
-              class="user-navigation__button user-navigation__button_sign"
-              for="sign-email"
-            >
+            <div class="user-navigation__button user-navigation__button_sign">
               <svg
                 class="user-navigation__icon-sign"
                 width="20"
@@ -114,7 +109,7 @@
                 <use xlink:href="#sign"></use>
               </svg>
               Вход
-            </label>
+            </div>
 
             <form
               class="header__form sign-form user-navigation__sign-form"
@@ -122,6 +117,7 @@
               method="get"
               name="form-sign"
             >
+              <label class="visually-hidden" for="sign-email">Логин</label>
               <input
                 class="input-field sign-form__email"
                 type="email"
@@ -175,7 +171,7 @@
 
         <div class="info header__info">
           <p class="info__time">c 10 до 20, ежедневно</p>
-          <a href=":tel88124502525" class="info__phone" aria-label="Позвоните нам: 8 812 450-25-25">
+          <a href="tel:88124502525" class="info__phone" aria-label="Позвоните нам: 8 812 450-25-25">
             8 812 450-25-25
           </a>
         </div>
@@ -515,7 +511,7 @@
                 Для заказов по телефону:
               </dt>
               <dd class="contacts__text">
-                <a class="contacts__link" href=":tel88124502525">8 812 450-25-25</a>
+                <a class="contacts__link" href="tel:88124502525">8 812 450-25-25</a>
                 <span>(с 10 до 20 ежедневно)</span>
               </dd>
             </dl>
